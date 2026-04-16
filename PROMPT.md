@@ -60,7 +60,11 @@ Generate `editions/edition-N.html` (where N is the new edition number) following
 
 Assign spread styles to stories so that the visual sequence feels varied — never put two dark spreads adjacent, never two stat spreads in a row.
 
-- Include a **cover spread** as spread 1 with the edition number, date, and 3 teaser stats
+- Include a **cover spread** as spread 1 with the edition number, date, and 3 teaser stats. The cover must include the Pain BC logo as an absolutely-positioned image in the top-right corner:
+  ```html
+  <img src="../pain-bc-logo.jpeg" alt="Pain BC" style="position:absolute; top:clamp(2rem,5vw,5rem); right:clamp(2rem,6vw,8rem); width:110px; opacity:0.88;">
+  ```
+  If the cover background is dark, add `filter:brightness(0) invert(1);` to the style to render the logo in white.
 - Include a **closing spread** as spread 10 with a call to action
 - Add fixed nav dots on the right edge
 
