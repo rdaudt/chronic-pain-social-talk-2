@@ -23,6 +23,28 @@ Search the web for chronic pain discussions, news, and research from **the past 
 - `STAT News chronic pain [current year]`
 - `CDC pain guidelines update [current year]`
 
+Also search Canadian sources specifically — aim for at least 2 Canadian stories per edition:
+- `Canadian Pain Society [current month] [current year]`
+- `Pain Canada announcement [current month] [current year]`
+- `Pain Ontario [current month] [current year]`
+- `Pain BC [current month] [current year]`
+- `Canadian Journal of Pain [current year]`
+- `Health Canada chronic pain [current year]`
+- `Chronic Pain Network Canada [current year]`
+
+**Reputable Canadian sources to draw from:**
+- Pain Ontario — painontario.ca
+- Pain BC — painbc.ca
+- Pain Canada — paincanada.ca
+- Canadian Pain Society — canadianpainsociety.ca (quarterly eNews, monthly National Pain Rounds)
+- Chronic Pain Association of Canada — chronicpaincanada.com
+- Canadian Journal of Pain — open-access peer-reviewed quarterly
+- Health Canada / Canadian Pain Task Force — canada.ca
+- Chronic Pain Network (SPOR/McMaster) — cpn-rdc.ca
+- McGill Alan Edwards Centre for Research on Pain — mcgill.ca/painresearch
+- UBC BC Pain Research Network — bcpainresearch.ubc.ca
+- Quebec Pain Research Network — qprn.ca
+
 Also search for trending Reddit topics:
 - `reddit chronic pain trending`
 - `r/ChronicPain r/chronicillness new discussion`
