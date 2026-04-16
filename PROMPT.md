@@ -145,7 +145,11 @@ Replace `BASE_URL` with the value of `base_url` from `state.json`. Substitute re
 ## Content Rules
 
 - **All content must be sourced from real web search results.** Never fabricate quotes, statistics, or stories.
-- **Attribute everything.** Name the source (subreddit, publication, study) in the HTML.
+- **Attribute everything with a clickable link.** Every spread must end with a source tag containing hyperlinks to the actual URLs. Use this pattern:
+  ```html
+  <p class="source-tag">Source: <a href="https://..." target="_blank" rel="noopener">Publication Name, Month Year</a></p>
+  ```
+  Multiple sources are separated with `&bull;`. Never list a source as plain text without a link — if you cannot find a real URL for a source, do not include it.
 - **No repeated content across editions.** Check state.json before including anything.
 - **Tone**: Journalistic, empathetic, never sensational. Let the community's own words carry the weight.
 - **The HTML must be fully self-contained** — Google Fonts link is the only external dependency.
