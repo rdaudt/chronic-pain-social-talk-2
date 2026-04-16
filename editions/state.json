@@ -1,0 +1,124 @@
+{
+  "last_edition": {
+    "number": 1,
+    "date": "2026-04-16",
+    "output_file": "magazine.html"
+  },
+  "used_content": {
+    "quotes": [
+      "Fake a foot drop or piss yourself. This is the absolute nuclear option",
+      "At this point the benefit is nothing. None of the procedures they offer are they comparably trained in",
+      "Doctor outranked all other words with 624 mentions across posts"
+    ],
+    "statistics": [
+      "50 million Americans with chronic pain",
+      "21% of US adults",
+      "131K r/ChronicPain subscribers",
+      "125 million opioid prescriptions in 2023",
+      "79,000 opioid deaths in 2023",
+      "$5.8 trillion projected opioid epidemic cost over 15 years",
+      "$367 billion in 2025 alone",
+      "86,537 submissions analyzed across 12 subreddits",
+      "Back pain 557 mentions, neck 142, leg 119, head 103, spine 99",
+      "Doctor 624 mentions vs therapist 35, nurse 34, surgeon 33",
+      "Women post 2x more than men in pain subreddits",
+      "28,067 posts from 58,000 Redditors",
+      "17-21 million high-impact pain"
+    ],
+    "source_urls": [
+      "https://www.painnewsnetwork.org/stories/2026/3/18/reflecting-on-13-years-of-chronic-pain",
+      "https://spectator.com/article/are-you-in-chronicpain/",
+      "https://forums.studentdoctor.net/threads/reddit-pcp-forum-derogatory-remarks-about-pain.1496784/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9146886/",
+      "https://arxiv.org/html/2507.08241v1"
+    ],
+    "story_angles": [
+      "prevalence-big-stat",
+      "opioid-paradox-prescribing-debate",
+      "doctor-dismissal-pinned-post",
+      "community-language-spoonies-zebras",
+      "body-region-data-map",
+      "gender-gap-posting-patterns",
+      "desperation-system-failure",
+      "crystal-lindell-13-years-personal-story",
+      "cost-big-stat-finish",
+      "cover-overview"
+    ]
+  },
+  "theme_pool": {
+    "treatment": [
+      "ketamine-clinics-access",
+      "nerve-block-experiences",
+      "cannabis-access-state-laws",
+      "physical-therapy-frustration",
+      "compounding-pharmacies",
+      "radiofrequency-ablation-perspectives",
+      "spinal-cord-stimulators-debate",
+      "low-dose-naltrexone",
+      "pain-psychology-cbt-act",
+      "medication-tapering-stories"
+    ],
+    "system": [
+      "insurance-denial-prior-auth",
+      "er-visits-chronic-pain",
+      "disability-application-process",
+      "pharmacy-refusal-stories",
+      "pain-contract-controversies",
+      "telehealth-pain-management",
+      "drug-testing-patients",
+      "specialist-wait-times",
+      "medical-records-battles",
+      "second-opinion-journeys"
+    ],
+    "identity": [
+      "caregiver-burnout-partners",
+      "dating-with-chronic-pain",
+      "parenting-through-flares",
+      "grief-for-former-self",
+      "invisible-illness-disbelief",
+      "young-people-chronic-pain",
+      "career-loss-identity-shift",
+      "friendship-erosion",
+      "mental-health-intersection",
+      "acceptance-vs-fighting"
+    ],
+    "science": [
+      "new-pain-research-breakthroughs",
+      "central-sensitization-explained",
+      "gut-brain-pain-axis",
+      "genetics-of-pain-sensitivity",
+      "neuroplasticity-and-chronic-pain",
+      "sleep-pain-cycle",
+      "inflammation-markers",
+      "pain-neuroscience-education",
+      "biopsychosocial-model-debate",
+      "placebo-nocebo-effects"
+    ],
+    "policy": [
+      "dea-scheduling-changes",
+      "state-opioid-laws-update",
+      "ada-workplace-accommodations",
+      "medicare-medicaid-coverage-gaps",
+      "cdc-guidelines-impact",
+      "pain-patient-advocacy-groups",
+      "right-to-try-legislation",
+      "telehealth-prescribing-rules",
+      "veterans-pain-care",
+      "international-comparisons"
+    ],
+    "community": [
+      "reddit-milestone-subscriber-growth",
+      "viral-post-of-the-week",
+      "ama-with-pain-specialist",
+      "community-wins-success-stories",
+      "mutual-aid-resource-sharing",
+      "new-subreddit-trends",
+      "most-upvoted-advice",
+      "community-drama-moderation",
+      "cross-subreddit-solidarity",
+      "real-world-meetups"
+    ]
+  },
+  "cooldown_editions": 3,
+  "notes": "Angles in used_content.story_angles cannot be reused for cooldown_editions number of editions. When selecting 10 stories for a new edition, draw from theme_pool families, skip any angle used in the last 3 editions, and prefer angles that have never been used."
+}

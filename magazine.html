@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE PAIN ISSUE — An Editorial Magazine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ── RESET & BASE ─────────────────────────────── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1a1a1a;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+
+  /* ── UTILITY ──────────────────────────────────── */
+  .serif { font-family: 'Fraunces', serif; }
+  .sans  { font-family: 'Inter', sans-serif; }
+  .spread {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 8rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .spread-grid {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    padding: clamp(2rem, 6vw, 8rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .kicker {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.9rem, 1.4vw, 1.3rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .deck {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.15rem, 2vw, 1.75rem);
+    line-height: 1.55;
+    max-width: 52ch;
+  }
+  .body-lg {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.05rem, 1.6vw, 1.45rem);
+    line-height: 1.7;
+    max-width: 60ch;
+  }
+  .num-giant {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    line-height: 0.85;
+  }
+  .pull-quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.6rem, 3.2vw, 3rem);
+    line-height: 1.3;
+    max-width: 38ch;
+  }
+
+  /* ── SPREAD 1 : COVER ────────────────────────── */
+  .cover {
+    background: #0a0a0a;
+    color: #f5f0e8;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .cover::before {
+    content: 'PAIN';
+    position: absolute;
+    top: -6vw;
+    left: -2vw;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(18rem, 38vw, 52rem);
+    color: rgba(255,255,255,0.03);
+    line-height: 0.8;
+    pointer-events: none;
+    user-select: none;
+  }
+  .cover .issue-tag {
+    position: absolute;
+    top: clamp(2rem, 5vw, 5rem);
+    left: clamp(2rem, 6vw, 8rem);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #b8a88a;
+  }
+  .cover .issue-tag span {
+    display: inline-block;
+    width: 2.5em;
+    height: 1px;
+    background: #b8a88a;
+    vertical-align: middle;
+    margin-right: 0.8em;
+  }
+  .cover h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 11vw, 14rem);
+    line-height: 0.88;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: #d4483b;
+  }
+  .cover .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.2rem, 2.2vw, 2rem);
+    color: #a09888;
+    max-width: 48ch;
+    line-height: 1.5;
+  }
+  .cover .stat-row {
+    display: flex;
+    gap: clamp(2rem, 5vw, 6rem);
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  .cover .stat-row .stat-item .num {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.4rem, 4.5vw, 4.5rem);
+    color: #d4483b;
+    line-height: 1;
+  }
+  .cover .stat-row .stat-item .label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+    color: #807868;
+    letter-spacing: 0.05em;
+    margin-top: 0.3rem;
+  }
+
+  /* ── SPREAD 2 : HERO BIG-STAT (50 MILLION) ──── */
+  .hero-stat {
+    background: #f5f0e8;
+    color: #1a1a1a;
+    text-align: center;
+    align-items: center;
+  }
+  .hero-stat .num-giant {
+    font-size: clamp(8rem, 22vw, 30rem);
+    color: #1a1a1a;
+    letter-spacing: -0.04em;
+  }
+  .hero-stat .unit {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    color: #6b5e4f;
+    margin-top: -1rem;
+  }
+  .hero-stat .deck {
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 52ch;
+    color: #4a4035;
+  }
+  .hero-stat .source {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    color: #9a8d7e;
+    margin-top: 1.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── SPREAD 3 : DARK / MIDNIGHT ──────────────── */
+  .midnight {
+    background: #111827;
+    color: #e5e1d8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 6rem);
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+    .midnight { grid-template-columns: 1fr; }
+  }
+  .midnight .left-col h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 8rem);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+  .midnight .left-col h2 .accent {
+    color: #60a5fa;
+  }
+  .midnight .right-col {
+    border-left: 1px solid rgba(255,255,255,0.1);
+    padding-left: clamp(1.5rem, 3vw, 4rem);
+  }
+  @media (max-width: 800px) {
+    .midnight .right-col { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 2rem; }
+  }
+  .midnight .body-lg { color: #c4bfb4; }
+  .midnight .pull-quote { color: #93c5fd; margin: 2rem 0; }
+  .midnight .attribution {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+    color: #6b7f9a;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── SPREAD 4 : ROSE / ALERT STAMP ──────────── */
+  .rose-alert {
+    background: #fdf2f0;
+    color: #3d1510;
+    position: relative;
+  }
+  .rose-alert::after {
+    content: 'DISMISSED';
+    position: absolute;
+    top: 50%;
+    right: clamp(2rem, 8vw, 10rem);
+    transform: translateY(-50%) rotate(-12deg);
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 10vw, 12rem);
+    color: rgba(212, 72, 59, 0.07);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    pointer-events: none;
+    user-select: none;
+  }
+  .rose-alert .stamp {
+    display: inline-block;
+    border: 4px solid #d4483b;
+    padding: 0.3em 0.8em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
+    color: #d4483b;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-bottom: 2rem;
+  }
+  .rose-alert h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 8.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    max-width: 18ch;
+  }
+  .rose-alert .deck { color: #6b3a34; max-width: 48ch; }
+  .rose-alert .quote-block {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 2px solid rgba(212, 72, 59, 0.2);
+  }
+  .rose-alert .pull-quote { color: #8b2920; }
+
+  /* ── SPREAD 5 : TERMINAL / GREEN-ON-BLACK ────── */
+  .terminal {
+    background: #0c0c0c;
+    color: #33ff66;
+    font-family: 'Inter', sans-serif;
+    padding: clamp(2rem, 6vw, 8rem);
+  }
+  .terminal .prompt-line {
+    font-weight: 700;
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    margin-bottom: 0.6rem;
+    opacity: 0.5;
+  }
+  .terminal .prompt-line::before {
+    content: '$ ';
+    color: #22aa44;
+  }
+  .terminal h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3.5rem, 8vw, 9rem);
+    color: #33ff66;
+    line-height: 0.92;
+    margin: 1.5rem 0;
+    text-shadow: 0 0 40px rgba(51,255,102,0.3);
+  }
+  .terminal .body-lg {
+    color: #22cc55;
+    font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+    max-width: 58ch;
+  }
+  .terminal .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .terminal .tag {
+    display: inline-block;
+    border: 1px solid #33ff66;
+    padding: 0.5em 1.2em;
+    font-weight: 700;
+    font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .terminal .tag.highlight {
+    background: #33ff66;
+    color: #0c0c0c;
+  }
+  .terminal .cursor-blink::after {
+    content: '█';
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ── SPREAD 6 : ACADEMIC / DROP-CAP ─────────── */
+  .academic {
+    background: #faf8f4;
+    color: #2a2520;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 7rem);
+    align-items: start;
+    align-content: center;
+  }
+  @media (max-width: 800px) {
+    .academic { grid-template-columns: 1fr; }
+  }
+  .academic .left-col .section-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 100;
+    font-size: clamp(8rem, 16vw, 18rem);
+    line-height: 0.8;
+    color: rgba(42, 37, 32, 0.06);
+    position: absolute;
+    top: clamp(1rem, 3vw, 4rem);
+    left: clamp(1rem, 4vw, 6rem);
+    pointer-events: none;
+  }
+  .academic h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5.5vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+  .academic .dropcap-text {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    line-height: 1.7;
+    color: #4a4035;
+  }
+  .academic .dropcap-text::first-letter {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 7vw, 6.5rem);
+    float: left;
+    line-height: 0.75;
+    margin-right: 0.15em;
+    margin-top: 0.08em;
+    color: #2a2520;
+  }
+  .academic .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+  .academic .data-table th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 1rem 0;
+    border-bottom: 2px solid #2a2520;
+    color: #6b5e4f;
+  }
+  .academic .data-table td {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(42,37,32,0.1);
+  }
+  .academic .data-table td:first-child {
+    font-weight: 600;
+    color: #2a2520;
+  }
+  .academic .data-table .bar {
+    display: inline-block;
+    height: 8px;
+    background: #d4483b;
+    border-radius: 4px;
+    margin-right: 0.8em;
+    vertical-align: middle;
+  }
+
+  /* ── SPREAD 7 : DUOTONE (GENDER & PAIN) ──────── */
+  .duotone {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: #e0e7ff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+  }
+  @media (max-width: 800px) {
+    .duotone { grid-template-columns: 1fr; }
+  }
+  .duotone .panel {
+    padding: clamp(2rem, 6vw, 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .duotone .panel-right {
+    background: rgba(255,255,255,0.04);
+  }
+  .duotone h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 6.5vw, 7.5rem);
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+  }
+  .duotone .accent { color: #a78bfa; }
+  .duotone .num-feature {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(5rem, 12vw, 14rem);
+    line-height: 0.85;
+    color: #a78bfa;
+  }
+  .duotone .body-lg { color: #c7d2fe; }
+  .duotone .caption {
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    color: #818cf8;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── SPREAD 8 : RED ALERT (SYSTEM FAILURE) ───── */
+  .red-alert {
+    background: #1a0505;
+    color: #fca5a5;
+    text-align: center;
+    align-items: center;
+  }
+  .red-alert::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,0,0,0.03) 2px,
+      rgba(255,0,0,0.03) 4px
+    );
+    pointer-events: none;
+  }
+  .red-alert .warning-tag {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #ef4444;
+    padding: 0.5em 1.5em;
+    border: 2px solid #ef4444;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  .red-alert h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 9rem);
+    line-height: 0.9;
+    color: #fef2f2;
+    max-width: 16ch;
+    margin: 0 auto 2rem;
+  }
+  .red-alert .pull-quote {
+    color: #fca5a5;
+    max-width: 32ch;
+    margin: 0 auto 1.5rem;
+    font-size: clamp(1.5rem, 2.8vw, 2.6rem);
+  }
+  .red-alert .body-lg {
+    color: #d4736e;
+    max-width: 50ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .red-alert .context {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+    color: #7f1d1d;
+    margin-top: 2rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── SPREAD 9 : WARM EDITORIAL (CRYSTAL'S STORY) */
+  .warm-editorial {
+    background: #fefbf6;
+    color: #2a2520;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: clamp(2rem, 5vw, 6rem);
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+    .warm-editorial { grid-template-columns: 1fr; }
+  }
+  .warm-editorial .sidebar {
+    border-right: 3px solid #2a2520;
+    padding-right: clamp(1.5rem, 3vw, 4rem);
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (max-width: 800px) {
+    .warm-editorial .sidebar { border-right: none; border-bottom: 3px solid #2a2520; padding-right: 0; padding-bottom: 2rem; }
+  }
+  .warm-editorial .sidebar .years {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(7rem, 15vw, 16rem);
+    line-height: 0.8;
+    color: #2a2520;
+  }
+  .warm-editorial .sidebar .years-label {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    color: #8b7d6b;
+    margin-top: 0.5rem;
+  }
+  .warm-editorial h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+  }
+  .warm-editorial .byline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8b7d6b;
+    margin-bottom: 1.5rem;
+  }
+  .warm-editorial .body-lg { color: #4a4035; }
+  .warm-editorial .timeline {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .warm-editorial .timeline-item {
+    flex: 1 1 140px;
+  }
+  .warm-editorial .timeline-item .yr {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: #d4483b;
+    line-height: 1;
+  }
+  .warm-editorial .timeline-item .event {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+    color: #6b5e4f;
+    margin-top: 0.3rem;
+    font-weight: 500;
+  }
+
+  /* ── SPREAD 10 : BIG STAT FINISH ─────────────── */
+  .stat-finish {
+    background: #d4483b;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .stat-finish .pre-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.3rem, 2.5vw, 2.4rem);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+  }
+  .stat-finish .num-giant {
+    font-size: clamp(6rem, 18vw, 24rem);
+    color: #fff;
+    letter-spacing: -0.03em;
+    text-shadow: 0 4px 60px rgba(0,0,0,0.2);
+  }
+  .stat-finish .unit {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    color: rgba(255,255,255,0.8);
+  }
+  .stat-finish .deck {
+    margin-top: 2rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 50ch;
+    text-align: center;
+  }
+  .stat-finish .cta {
+    margin-top: 3rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    border: 3px solid #fff;
+    display: inline-block;
+    color: #fff;
+  }
+  .stat-finish .footer-note {
+    position: absolute;
+    bottom: clamp(1.5rem, 3vw, 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── NAV DOTS ────────────────────────────────── */
+  .nav-dots {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    z-index: 100;
+  }
+  .nav-dots a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: all 0.3s;
+  }
+  .nav-dots a:hover,
+  .nav-dots a.active {
+    background: #d4483b;
+    border-color: #d4483b;
+    transform: scale(1.4);
+  }
+  .nav-dots.on-light a {
+    background: rgba(0,0,0,0.15);
+    border-color: rgba(0,0,0,0.3);
+  }
+  .nav-dots.on-light a:hover,
+  .nav-dots.on-light a.active {
+    background: #d4483b;
+    border-color: #d4483b;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV DOTS -->
+<nav class="nav-dots" id="navDots">
+  <a href="#cover" title="Cover"></a>
+  <a href="#fifty-million" title="50 Million"></a>
+  <a href="#take-me-seriously" title="Take Me Seriously"></a>
+  <a href="#dismissed" title="Dismissed"></a>
+  <a href="#spoonies" title="The Spoonies"></a>
+  <a href="#body-map" title="Body Map"></a>
+  <a href="#gender" title="Gender & Pain"></a>
+  <a href="#system-failure" title="System Failure"></a>
+  <a href="#thirteen-years" title="13 Years"></a>
+  <a href="#cost" title="The Cost"></a>
+</nav>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 1 — COVER
+     ════════════════════════════════════════════════ -->
+<section class="spread cover" id="cover">
+  <div class="issue-tag"><span></span>r/ChronicPain · 131,000 Members · April 2026</div>
+  <h1>The <em>Pain</em><br>Issue</h1>
+  <p class="subtitle">Ten stories from the internet's largest chronic-pain community — where 50&nbsp;million Americans go to be heard when their doctors won't listen.</p>
+  <div class="stat-row">
+    <div class="stat-item">
+      <div class="num">50M</div>
+      <div class="label">Americans with chronic pain</div>
+    </div>
+    <div class="stat-item">
+      <div class="num">21%</div>
+      <div class="label">of all U.S. adults</div>
+    </div>
+    <div class="stat-item">
+      <div class="num">131K</div>
+      <div class="label">r/ChronicPain subscribers</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 2 — HERO BIG-STAT: 50 MILLION
+     ════════════════════════════════════════════════ -->
+<section class="spread hero-stat" id="fifty-million">
+  <div class="kicker" style="color:#8b7d6b; margin-bottom:1rem;">Story One · The Number</div>
+  <div class="num-giant">50</div>
+  <div class="unit">million Americans</div>
+  <p class="deck">live with pain that persists for more than three months. Among them, 17&nbsp;to&nbsp;21&nbsp;million experience high-impact pain — the kind that makes it impossible to work, sleep, or care for your children on most days.</p>
+  <div class="source">Source: CDC National Health Statistics, 2021–2025</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 3 — MIDNIGHT: THE OPIOID TIGHTROPE
+     ════════════════════════════════════════════════ -->
+<section class="spread-grid midnight" id="take-me-seriously" style="min-height:100vh; align-content:center;">
+  <div class="left-col">
+    <div class="kicker" style="color:#60a5fa; margin-bottom:1.5rem;">Story Two · The Tightrope</div>
+    <h2>The Opioid <span class="accent">Paradox</span></h2>
+    <p class="body-lg">125&nbsp;million opioid prescriptions were written in 2023. In the same year, 79,000 Americans died from opioid-related overdoses. The community is caught between two crises: undertreated pain and a lethal epidemic.</p>
+  </div>
+  <div class="right-col">
+    <p class="pull-quote">"At this point the benefit is nothing. None of the procedures they offer are they comparably trained in."</p>
+    <p class="attribution">— Primary care physician on Reddit, discussing pain specialists</p>
+    <p class="body-lg" style="margin-top:2rem;">On r/ChronicPain, patients describe a system where PCPs won't prescribe and pain clinics push procedures. Many report managing tapering on their own — without medical guidance — because their clinic "hampering this process" left them no choice.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 4 — ROSE ALERT: DISMISSED
+     ════════════════════════════════════════════════ -->
+<section class="spread rose-alert" id="dismissed">
+  <div class="stamp">⚠ Community Alert</div>
+  <div class="kicker" style="color:#d4483b; margin-bottom:1rem;">Story Three · The Pinned Post</div>
+  <h2>How to Get Doctors to Take You Seriously</h2>
+  <p class="deck">The single most-pinned, most-referenced post in r/ChronicPain's history. It exists because anger at not being taken seriously is the predominant emotion on the forum. It is a survival guide written by patients for patients — because no institution wrote one for them.</p>
+  <div class="quote-block">
+    <p class="pull-quote">"Doctor outranked all other words with 624 mentions across posts. Not 'medication.' Not 'surgery.' Doctor. That tells you where the pain really lives."</p>
+    <p class="attribution" style="color:#8b4944; font-family:'Inter',sans-serif; font-weight:600; font-size:clamp(0.9rem,1.1vw,1.05rem); margin-top:1rem; letter-spacing:0.05em;">— Analysis of 86,537 posts across 12 chronic-pain subreddits</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 5 — TERMINAL: THE SPOONIES
+     ════════════════════════════════════════════════ -->
+<section class="spread terminal" id="spoonies">
+  <div class="prompt-line">cat /r/ChronicPain/community/identity.txt</div>
+  <div class="prompt-line">loading lexicon...</div>
+  <div class="kicker" style="color:#22aa44; margin-bottom:1rem; letter-spacing:0.25em;">Story Four · The Language</div>
+  <h2 class="cursor-blink">We Call Ourselves Spoonies</h2>
+  <p class="body-lg" style="margin-top:1.5rem;">Inside r/ChronicPain, a parallel language has evolved. Members call themselves <strong>spoonies</strong> — from Spoon Theory, where each day starts with a finite number of "spoons" of energy. Those with rare connective-tissue disorders are <strong>zebras</strong>, because medical students are taught "when you hear hoofbeats, think horses, not zebras." They reclaimed the insult.</p>
+  <p class="body-lg" style="margin-top:1.5rem;">The acronyms fly thick: <strong>CLBP</strong> (chronic lower back pain), <strong>ME</strong> (myalgic encephalomyelitis), <strong>ACT</strong> (acceptance and commitment therapy). Outsiders see jargon. Insiders see a community that built its own medical shorthand because the official one kept leaving them out.</p>
+  <div class="tag-cloud">
+    <span class="tag highlight">#SPOONIES</span>
+    <span class="tag">#ZEBRAS</span>
+    <span class="tag">#CRIPFAM</span>
+    <span class="tag">CLBP</span>
+    <span class="tag">ME/CFS</span>
+    <span class="tag">hEDS</span>
+    <span class="tag highlight">ACT</span>
+    <span class="tag">CRPS</span>
+    <span class="tag">FLARE</span>
+    <span class="tag">#INVISIBLEILLNESS</span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 6 — ACADEMIC DROP-CAP: BODY MAP
+     ════════════════════════════════════════════════ -->
+<section class="spread-grid academic" id="body-map" style="min-height:100vh; align-content:center;">
+  <div class="section-num">06</div>
+  <div class="left-col">
+    <div class="kicker" style="color:#8b7d6b; margin-bottom:1rem;">Story Five · The Body Map</div>
+    <h2>Where It Hurts, by the Numbers</h2>
+    <p class="dropcap-text">Researchers analyzed 86,537 submissions from 12 chronic-pain subreddits to map where pain lives in the Reddit community. The results are overwhelming in their concentration: the back dominates with 557 mentions — nearly four times the next region. Neck, leg, head, and spine follow. These are not abstractions. Each number is a person typing through pain at 2 a.m., looking for someone who understands.</p>
+  </div>
+  <div class="right-col">
+    <table class="data-table">
+      <thead>
+        <tr><th>Body Region</th><th>Mentions</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Back</td><td><span class="bar" style="width:clamp(120px,22vw,280px)"></span>557</td><td></td></tr>
+        <tr><td>Neck</td><td><span class="bar" style="width:clamp(36px,6.6vw,72px)"></span>142</td><td></td></tr>
+        <tr><td>Leg</td><td><span class="bar" style="width:clamp(30px,5.5vw,60px)"></span>119</td><td></td></tr>
+        <tr><td>Head</td><td><span class="bar" style="width:clamp(26px,4.8vw,52px)"></span>103</td><td></td></tr>
+        <tr><td>Spine</td><td><span class="bar" style="width:clamp(25px,4.5vw,50px)"></span>99</td><td></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:2.5rem; font-family:'Inter',sans-serif; font-size:clamp(1rem,1.3vw,1.2rem); color:#6b5e4f; line-height:1.6;">The most frequently mentioned provider? <strong style="color:#2a2520;">Doctor</strong> — 624 mentions. Followed by therapist (35), nurse (34), surgeon (33). The ratio says everything: patients talk about their doctors <em>eighteen times more</em> than any other provider.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 7 — DUOTONE: GENDER & PAIN
+     ════════════════════════════════════════════════ -->
+<section class="spread-grid duotone" id="gender" style="min-height:100vh;">
+  <div class="panel">
+    <div class="kicker" style="color:#a78bfa; margin-bottom:1.5rem;">Story Six · The Gender Gap</div>
+    <h2>She Posts <span class="accent">Twice</span></h2>
+    <p class="body-lg" style="margin-top:1rem;">Research examining 28,067 posts from 58,000 Redditors found a stark asymmetry. More men subscribe to chronic-pain subreddits. But women post nearly <strong>twice as much</strong>. Their language is more emotionally focused — describing not just symptoms, but the full catastrophe of living with invisible illness.</p>
+    <p class="body-lg" style="margin-top:1.5rem;">Conditions like migraine and sinusitis appear disproportionately in women's posts. The findings suggest women don't just experience pain differently — they <em>narrate</em> it differently, and the internet may be the only place that receives it.</p>
+  </div>
+  <div class="panel panel-right" style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div class="num-feature">2×</div>
+    <div class="caption">posts by women vs. men</div>
+    <div style="margin-top:3rem;">
+      <div class="num-feature" style="font-size:clamp(3rem,7vw,8rem);">58K</div>
+      <div class="caption">Redditors studied</div>
+    </div>
+    <div style="margin-top:3rem;">
+      <div class="num-feature" style="font-size:clamp(3rem,7vw,8rem);">12</div>
+      <div class="caption">pain subreddits analyzed</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 8 — RED ALERT: SYSTEM FAILURE
+     ════════════════════════════════════════════════ -->
+<section class="spread red-alert" id="system-failure">
+  <div class="warning-tag">System Failure</div>
+  <div class="kicker" style="color:#ef4444; margin-bottom:1rem;">Story Seven · The Breaking Point</div>
+  <h2>When Desperation Becomes the Treatment Plan</h2>
+  <p class="pull-quote">"Fake a foot drop or piss yourself. This is the absolute nuclear option, but there comes a point where it's just ridiculous that people won't operate on your broken spine."</p>
+  <p class="body-lg">This advice — posted in a chronic-pain subreddit — was not irony. It was triage. When the system designed to help you instead interrogates you, when imaging shows a broken spine but the answer is still "let's try physical therapy again," patients begin coaching each other on how to perform severity for an audience of skeptics.</p>
+  <p class="body-lg" style="margin-top:1.5rem;">The community documented what happened when one member's desperation turned to rage against the healthcare system itself — a trajectory visible in post history that escalated from questions, to frustration, to fury.</p>
+  <div class="context">Quoted from r/ChronicPain community post</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 9 — WARM EDITORIAL: 13 YEARS
+     ════════════════════════════════════════════════ -->
+<section class="spread-grid warm-editorial" id="thirteen-years" style="min-height:100vh; align-content:center;">
+  <div class="sidebar">
+    <div class="years">13</div>
+    <div class="years-label">years of pain</div>
+  </div>
+  <div class="main-col">
+    <div class="kicker" style="color:#8b7d6b; margin-bottom:0.8rem;">Story Eight · The Long Road</div>
+    <h2>Crystal Lindell:<br>A Life Rebuilt Around Pain</h2>
+    <div class="byline">Pain News Network · March 2026</div>
+    <p class="body-lg">At 29, Crystal Lindell felt rib soreness after a Super Bowl party. Within six months she had moved back to her mother's house and quit her second job. For years, doctors called it "intercostal neuralgia" — a label that described nothing. Five years later, on March&nbsp;15,&nbsp;2018, she was finally diagnosed with hypermobile Ehlers-Danlos Syndrome.</p>
+    <p class="body-lg" style="margin-top:1.5rem;">She shifted from accepting government messaging against opioids to advocating for patient access. She learned that health insurance "primarily benefits those who never need to use it." Chronic pain reduced her friend circle, ended one relationship, but brought her to Chris — her partner of eight years. She found that pain forced her to keep only what matters.</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="yr">2013</div><div class="event">First symptoms</div></div>
+      <div class="timeline-item"><div class="yr">2014</div><div class="event">Moved home</div></div>
+      <div class="timeline-item"><div class="yr">2018</div><div class="event">hEDS diagnosis</div></div>
+      <div class="timeline-item"><div class="yr">2026</div><div class="event">13 years, still here</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SPREAD 10 — BIG-STAT FINISH: THE COST
+     ════════════════════════════════════════════════ -->
+<section class="spread stat-finish" id="cost">
+  <div class="kicker" style="color:rgba(255,255,255,0.6); margin-bottom:1.5rem;">Story Nine & Ten · The Price We Pay</div>
+  <div class="pre-text">The projected cost of the opioid epidemic over the next 15 years:</div>
+  <div class="num-giant">$5.8</div>
+  <div class="unit">trillion</div>
+  <p class="deck">That's $367 billion in 2025 alone. Behind every dollar is a person who posted at midnight asking if anyone else felt this way. Behind every statistic in this magazine is a Reddit thread that someone typed with one hand because the other one doesn't work anymore.</p>
+  <div class="cta">Read. Listen. Believe them.</div>
+  <div class="footer-note">Data sourced from CDC, NCHS, JMIR, MDPI, Pain News Network, and the Reddit Reports of Chronic Pain dataset (86,537 submissions). April 2026.</div>
+</section>
+
+<script>
+  // Highlight active nav dot based on scroll position
+  const dots = document.querySelectorAll('.nav-dots a');
+  const sections = document.querySelectorAll('.spread, .spread-grid');
+  const lightBgs = new Set(['fifty-million', 'dismissed', 'body-map', 'thirteen-years']);
+
+  function updateNav() {
+    let current = '';
+    sections.forEach(s => {
+      const top = s.getBoundingClientRect().top;
+      if (top < window.innerHeight * 0.5) current = s.id;
+    });
+    dots.forEach(d => d.classList.toggle('active', d.getAttribute('href') === '#' + current));
+    const nav = document.getElementById('navDots');
+    nav.classList.toggle('on-light', lightBgs.has(current));
+  }
+
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+</script>
+
+</body>
+</html>

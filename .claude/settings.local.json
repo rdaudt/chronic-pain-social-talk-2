@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.reddit.com)",
+      "WebFetch(domain:old.reddit.com)",
+      "WebFetch(domain:spectator.com)",
+      "WebFetch(domain:themighty.com)",
+      "WebFetch(domain:www.painnewsnetwork.org)",
+      "WebFetch(domain:forums.studentdoctor.net)",
+      "Skill(schedule)",
+      "Skill(schedule:*)"
+    ]
+  }
+}
