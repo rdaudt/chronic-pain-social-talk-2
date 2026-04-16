@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE PAIN ISSUE — Edition 2, April 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ── RESET & BASE ─────────────────────────────── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.5; color: #1a1a1a; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+
+  /* ── UTILITY ──────────────────────────────────── */
+  .serif { font-family: 'Fraunces', serif; }
+  .spread {
+    min-height: 100vh; width: 100%;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: clamp(2rem, 6vw, 8rem);
+    position: relative; overflow: hidden;
+  }
+  .kicker {
+    font-family: 'Inter', sans-serif; font-weight: 700;
+    font-size: clamp(0.9rem, 1.4vw, 1.3rem);
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .source-tag {
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.6; margin-top: 1.25rem;
+  }
+
+  /* ── NAV DOTS ─────────────────────────────────── */
+  .nav-dots {
+    position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 0.65rem; z-index: 100;
+  }
+  .nav-dots a {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(0,0,0,0.22); display: block;
+    transition: all 0.2s; border: 1.5px solid rgba(0,0,0,0.28);
+  }
+  .nav-dots a:hover { background: rgba(0,0,0,0.6); transform: scale(1.4); }
+
+  /* ── SPREAD 1: POSTER/TYPE-ONLY — Cover ─────────── */
+  #cover {
+    background: #f2ede6;
+    justify-content: space-between;
+    padding-top: clamp(3rem, 8vh, 6rem);
+    padding-bottom: clamp(3rem, 8vh, 6rem);
+  }
+  .cover-flag {
+    font-family: 'Inter', sans-serif; font-weight: 800;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
+    letter-spacing: 0.3em; text-transform: uppercase; color: #666;
+  }
+  .cover-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(5rem, 17vw, 17rem);
+    font-weight: 900; line-height: 0.85;
+    letter-spacing: -0.03em; color: #1a1a1a;
+    margin: auto 0;
+  }
+  .cover-subtitle {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: clamp(1.4rem, 3.5vw, 3.2rem);
+    color: #c0392b; line-height: 1.1;
+  }
+  .cover-teasers {
+    display: flex; gap: 3rem;
+    border-top: 2px solid #1a1a1a; padding-top: 1.5rem;
+    flex-wrap: wrap; margin-top: 1rem;
+  }
+  .cover-teaser { flex: 1; min-width: 150px; }
+  .cover-teaser-stat {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1; color: #c0392b;
+  }
+  .cover-teaser-label {
+    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    margin-top: 0.4rem; color: #555; line-height: 1.5;
+  }
+  .cover-meta {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888;
+    margin-top: 1rem;
+  }
+
+  /* ── SPREAD 2: HERO BIG-STAT — Brain Circuit ──────── */
+  #brain { background: #eef4fb; }
+  .hero-number {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(8rem, 26vw, 26rem);
+    line-height: 0.82; color: #1a3a6b;
+    letter-spacing: -0.04em;
+  }
+  .hero-unit {
+    font-family: 'Inter', sans-serif; font-weight: 800;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: #1a3a6b; margin-top: 0.25rem; margin-bottom: 1.5rem;
+  }
+  .hero-pull {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: clamp(1.3rem, 2.2vw, 2rem); color: #1a3a6b;
+    max-width: 44ch;
+    border-left: 4px solid #1a3a6b; padding-left: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .hero-body {
+    max-width: 56ch;
+    font-size: clamp(0.95rem, 1.6vw, 1.3rem); line-height: 1.7; color: #1a1a1a;
+  }
+
+  /* ── SPREAD 3: DARK/MIDNIGHT — Non-Opioid Horizon ──── */
+  #gene { background: #0d1b2a; color: #e8edf2; }
+  .dark-kicker { color: #7eb8e0; }
+  .dark-headline {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(3rem, 8vw, 8rem); line-height: 0.88; color: #fff; margin: 1.5rem 0;
+  }
+  .dark-body { font-size: clamp(0.95rem, 1.5vw, 1.2rem); line-height: 1.7; max-width: 60ch; color: #c8d6e2; }
+  .dark-cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .dark-card {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 1.5rem;
+  }
+  .dark-card-label {
+    font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: #7eb8e0; margin-bottom: 0.75rem;
+  }
+  .dark-card-text { font-size: 0.92rem; line-height: 1.65; color: #c8d6e2; }
+
+  /* ── SPREAD 4: INFOGRAPHIC — Sleep/Pain Cycle ──────── */
+  #sleep { background: #1a1a2e; color: #f0e6ff; }
+  .infographic-kicker { color: #a78bfa; }
+  .infographic-headline {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 6rem); line-height: 0.88; color: #fff; margin: 1rem 0 2rem;
+  }
+  .bars-grid { display: flex; flex-direction: column; gap: 1.1rem; max-width: 680px; }
+  .bar-row { display: flex; align-items: center; gap: 1rem; }
+  .bar-label { font-size: 0.82rem; width: 210px; flex-shrink: 0; color: #c4b5fd; text-align: right; line-height: 1.4; }
+  .bar-track { flex: 1; height: 22px; background: rgba(255,255,255,0.1); }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+  .bar-value { font-weight: 700; font-size: 0.88rem; color: #e0d7ff; width: 44px; }
+  .sleep-pull {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: clamp(1.1rem, 1.9vw, 1.7rem); color: #a78bfa;
+    max-width: 52ch; margin: 2rem 0 1rem;
+    border-left: 3px solid #7c3aed; padding-left: 1.25rem;
+  }
+  .sleep-body { font-size: clamp(0.9rem, 1.4vw, 1.1rem); max-width: 60ch; line-height: 1.75; color: #c4b5fd; }
+
+  /* ── SPREAD 5: RED ALERT — Insurance Denial ────────── */
+  #insurance { background: #1a0000; color: #fff; }
+  #insurance::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(200,0,0,0.04) 3px, rgba(200,0,0,0.04) 4px);
+    pointer-events: none;
+  }
+  .alert-kicker { color: #ff4444; }
+  .alert-headline {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(4rem, 14vw, 14rem); line-height: 0.82;
+    color: #ff2222; margin: 0.75rem 0;
+    text-shadow: 2px 2px 0 #400000;
+  }
+  .alert-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.25rem 0; }
+  .alert-badge {
+    background: #cc0000; color: #fff;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .alert-stat-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.25rem; margin: 1.75rem 0;
+  }
+  .alert-stat-box { border: 1px solid #660000; padding: 1.25rem; background: rgba(200,0,0,0.07); }
+  .alert-stat-num {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(2rem, 3.5vw, 3rem); color: #ff4444;
+  }
+  .alert-stat-label { font-size: 0.78rem; color: #cc8888; margin-top: 0.4rem; line-height: 1.5; }
+  .alert-body { font-size: clamp(0.9rem, 1.4vw, 1.1rem); max-width: 60ch; line-height: 1.7; color: #ffcccc; }
+
+  /* ── SPREAD 6: ACADEMIC/DROP-CAP — SSDI ────────────── */
+  #ssdi { background: #faf6ef; color: #1a1a1a; }
+  .academic-kicker { color: #5a4220; }
+  .academic-headline {
+    font-family: 'Fraunces', serif; font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 5.5rem); line-height: 0.95; color: #2a1a00; margin: 1rem 0 2rem;
+  }
+  .academic-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 920px; }
+  @media (max-width: 640px) { .academic-columns { grid-template-columns: 1fr; } }
+  .drop-cap::first-letter {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: 4.8em; float: left; line-height: 0.75;
+    margin-right: 0.1em; color: #8b5e1a;
+  }
+  .academic-body { font-size: clamp(0.92rem, 1.35vw, 1.05rem); line-height: 1.8; color: #2a1a00; margin-bottom: 1.1rem; }
+  .academic-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 0.5rem; }
+  .academic-table th {
+    text-align: left; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    font-size: 0.72rem; border-bottom: 2px solid #5a4220; padding-bottom: 0.5rem; color: #5a4220;
+  }
+  .academic-table td {
+    padding: 0.6rem 0.25rem; border-bottom: 1px solid #d4c4a0; color: #2a1a00; vertical-align: top; line-height: 1.5;
+  }
+  .academic-table td:first-child { font-weight: 600; width: 50%; padding-right: 1rem; }
+
+  /* ── SPREAD 7: TERMINAL — RFA Reddit ───────────────── */
+  #rfa { background: #0a0f0a; color: #00ff41; font-family: 'Courier New', monospace; }
+  .terminal-prompt { font-size: clamp(0.75rem, 1.2vw, 1rem); opacity: 0.6; margin-bottom: 0.5rem; }
+  .terminal-headline {
+    font-weight: 700; font-size: clamp(1.8rem, 4vw, 4rem); line-height: 1.05;
+    color: #00ff41; margin: 1rem 0;
+    text-shadow: 0 0 14px rgba(0,255,65,0.35);
+  }
+  .terminal-body { font-size: clamp(0.82rem, 1.25vw, 1rem); line-height: 1.9; max-width: 65ch; color: #80ff9e; }
+  .terminal-block {
+    border: 1px solid #00ff41; padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+    background: rgba(0,255,65,0.025); max-width: 660px;
+  }
+  .terminal-block-label { font-size: 0.68rem; letter-spacing: 0.15em; color: #00ff41; opacity: 0.55; margin-bottom: 0.75rem; }
+  .terminal-line { display: flex; gap: 1rem; font-size: clamp(0.8rem, 1.2vw, 0.95rem); margin: 0.35rem 0; }
+  .terminal-key { color: #00ff41; flex-shrink: 0; min-width: 110px; }
+  .terminal-val { color: #80ff9e; }
+  .cursor::after { content: '▊'; animation: blink 1s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  /* ── SPREAD 8: ROSE/ALERT/STAMP — Invisible Illness ─── */
+  #invisible { background: #fdf0f0; }
+  .stamp-watermark {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-22deg);
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(5rem, 18vw, 16rem);
+    color: rgba(180,60,60,0.07); white-space: nowrap;
+    pointer-events: none; user-select: none;
+  }
+  .rose-kicker { color: #b43c3c; }
+  .rose-stamp {
+    display: inline-block; border: 3px solid #b43c3c; padding: 0.3rem 0.9rem;
+    font-weight: 700; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: #b43c3c; transform: rotate(-2deg); margin-bottom: 1.25rem;
+  }
+  .rose-headline {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 6.5rem); line-height: 0.9; color: #2a0000; margin: 0.75rem 0;
+  }
+  .rose-conditions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin: 1.25rem 0; }
+  .rose-tag { padding: 0.35rem 0.8rem; background: #fde0e0; border: 1px solid #e0a0a0; font-size: 0.78rem; font-weight: 600; color: #7a1a1a; }
+  .rose-body { font-size: clamp(0.92rem, 1.45vw, 1.15rem); max-width: 58ch; line-height: 1.75; color: #2a0000; margin-bottom: 1rem; }
+  .rose-pull {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 1.9rem); color: #b43c3c;
+    max-width: 46ch; margin: 1.5rem 0;
+    border-left: 4px solid #b43c3c; padding-left: 1.25rem;
+  }
+
+  /* ── SPREAD 9: BROADSHEET — Legislation ────────────── */
+  #legislation { background: #fff; border-top: 6px solid #1a1a1a; }
+  .broadsheet-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    border-bottom: 2px solid #1a1a1a; padding-bottom: 0.75rem; margin-bottom: 1.5rem;
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .broadsheet-publication {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(1.4rem, 2.8vw, 2.6rem); letter-spacing: -0.02em;
+  }
+  .broadsheet-date { font-size: 0.78rem; color: #666; letter-spacing: 0.08em; text-transform: uppercase; }
+  .broadsheet-headline {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(2.2rem, 5.5vw, 6rem); line-height: 0.9; color: #1a1a1a; margin-bottom: 1.5rem;
+  }
+  .broadsheet-rule { border: none; border-top: 1px solid #1a1a1a; margin: 1.25rem 0; }
+  .broadsheet-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  @media (max-width: 700px) { .broadsheet-cols { grid-template-columns: 1fr; } }
+  .broadsheet-col-head {
+    font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    border-bottom: 1px solid #1a1a1a; padding-bottom: 0.5rem; margin-bottom: 0.75rem;
+  }
+  .broadsheet-col-body { font-size: clamp(0.85rem, 1.3vw, 1rem); line-height: 1.75; }
+  .broadsheet-aside { border: 2px solid #1a1a1a; padding: 1.25rem; margin-top: 1.75rem; background: #f8f6f2; }
+  .broadsheet-aside-head { font-weight: 800; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; color: #555; }
+  .broadsheet-aside-body { font-size: 0.88rem; line-height: 1.65; }
+
+  /* ── SPREAD 10: WARM EDITORIAL — Closing ───────────── */
+  #community { background: #f5f0e8; }
+  .warm-layout { display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: start; }
+  @media (max-width: 700px) { .warm-layout { grid-template-columns: 1fr; } }
+  .warm-giant {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(6rem, 16vw, 14rem); line-height: 0.85; color: #c0392b;
+    writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);
+  }
+  @media (max-width: 700px) { .warm-giant { writing-mode: horizontal-tb; transform: none; } }
+  .warm-kicker { color: #8b4513; }
+  .warm-headline {
+    font-family: 'Fraunces', serif; font-weight: 900;
+    font-size: clamp(2rem, 4.5vw, 5rem); line-height: 0.92; color: #1a1a1a; margin: 1rem 0 1.5rem;
+  }
+  .warm-body { font-size: clamp(0.92rem, 1.45vw, 1.15rem); line-height: 1.75; max-width: 55ch; margin-bottom: 1.1rem; }
+  .warm-timeline { margin-top: 2rem; }
+  .warm-timeline-item {
+    display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid #d4c8b0;
+  }
+  .warm-timeline-date { font-weight: 700; font-size: 0.78rem; color: #8b4513; width: 72px; flex-shrink: 0; }
+  .warm-timeline-text { font-size: 0.9rem; color: #2a1a00; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<!-- NAV DOTS -->
+<nav class="nav-dots" aria-label="Section navigation">
+  <a href="#cover" title="Cover"></a>
+  <a href="#brain" title="Brain Circuit"></a>
+  <a href="#gene" title="The Non-Opioid Horizon"></a>
+  <a href="#sleep" title="Sleep & Pain"></a>
+  <a href="#insurance" title="Insurance Denials"></a>
+  <a href="#ssdi" title="Disability Benefits"></a>
+  <a href="#rfa" title="RFA Community Data"></a>
+  <a href="#invisible" title="Invisible Illness"></a>
+  <a href="#legislation" title="Legislation"></a>
+  <a href="#community" title="Closing"></a>
+</nav>
+
+<!-- ── SPREAD 1: COVER ──────────────────────────────── -->
+<section id="cover" class="spread" style="background:#f2ede6; justify-content:space-between; padding-top:clamp(3rem,8vh,6rem); padding-bottom:clamp(3rem,8vh,6rem);">
+  <div class="cover-flag">The Pain Issue &mdash; Vol. 1, No. 2 &mdash; April 2026</div>
+  <div class="cover-title">THE<br>PAIN<br>ISSUE</div>
+  <div class="cover-subtitle">Edition 2: The Science &amp; System Issue</div>
+  <div class="cover-teasers">
+    <div class="cover-teaser">
+      <div class="cover-teaser-stat">7.4%</div>
+      <div class="cover-teaser-label">Medicare Advantage pain<br>treatment denials — up from<br>5.9% in 2023</div>
+    </div>
+    <div class="cover-teaser">
+      <div class="cover-teaser-stat">88%</div>
+      <div class="cover-teaser-label">Of chronic pain patients<br>who struggle to sleep —<br>and why sleep may come<br>first</div>
+    </div>
+    <div class="cover-teaser">
+      <div class="cover-teaser-stat">S.&nbsp;3064</div>
+      <div class="cover-teaser-label">Bipartisan bill to remove<br>Medicare barriers to<br>non-opioid pain care</div>
+    </div>
+  </div>
+  <div class="cover-meta">Weekly editorial magazine &mdash; Chronic Pain Community &mdash; April 16, 2026</div>
+</section>
+
+<!-- ── SPREAD 2: HERO BIG-STAT — Stanford Brain Circuit ── -->
+<section id="brain" class="spread" style="background:#eef4fb;">
+  <p class="kicker" style="color:#4a7ab5; letter-spacing:0.18em;">Science &mdash; Neuroscience</p>
+  <div class="hero-number" style="color:#1a3a6b;">2</div>
+  <div class="hero-unit" style="color:#1a3a6b;">Separate circuits</div>
+  <div class="hero-pull" style="color:#1a3a6b; border-left-color:#1a3a6b;">
+    "Acute pain and chronic pain can be completely separate."
+    <span style="display:block; font-style:normal; font-family:'Inter',sans-serif; font-size:0.62em; letter-spacing:0.1em; text-transform:uppercase; margin-top:0.5rem; opacity:0.75;">— Xiaoke Chen, senior author, Stanford University</span>
+  </div>
+  <div class="hero-body">
+    Stanford researchers published a landmark study in <em>Nature</em> on April 1, 2026, tracing a previously unknown circuit loop in the nervous system that keeps chronic pain alive long after an injury has healed. The pathway runs from the spinal cord to the thalamus to the cortex to the brainstem — and back to the spinal cord — a self-sustaining loop entirely separate from the circuits that process normal, protective pain signals.
+    <br><br>
+    When researchers silenced the specific neurons driving this circuit in animal models, chronic pain eased while the ability to detect genuinely dangerous stimuli remained fully intact. The study, "Deconstruction of a spino-brain–spinal cord circuit that drives chronic pain," opens the door to therapies that could interrupt the loop without numbing ordinary sensation. Researchers are now analyzing human genetic data to confirm the mechanism holds.
+  </div>
+  <p class="source-tag" style="color:#4a7ab5;">Source: Stanford News &bull; <em>Nature</em>, April 1, 2026 &bull; news.stanford.edu</p>
+</section>
+
+<!-- ── SPREAD 3: DARK/MIDNIGHT — Non-Opioid Horizon ──── -->
+<section id="gene" class="spread" style="background:#0d1b2a; color:#e8edf2;">
+  <p class="kicker dark-kicker">Treatment &mdash; The Post-Opioid Horizon</p>
+  <h2 class="dark-headline">Pain's<br>Off<br>Switch</h2>
+  <p class="dark-body">Three separate research teams announced major milestones this season in the race to treat chronic pain without opioids — a race that patients have waited on for decades.</p>
+  <div class="dark-cards">
+    <div class="dark-card">
+      <div class="dark-card-label">Gene Therapy &mdash; U Penn / CMU / Stanford</div>
+      <div class="dark-card-text">Scientists used AI to map pain processing in the brain, then engineered a gene therapy that creates a targeted "off switch" — mimicking morphine's analgesic benefit without activating the addiction pathway. It quiets pain at its neural source rather than flooding the whole system. Reported by ScienceDaily, March 2026.</div>
+    </div>
+    <div class="dark-card">
+      <div class="dark-card-label">Enzyme Blocking &mdash; Virginia Tech, published in <em>PAIN</em></div>
+      <div class="dark-card-text">Researchers erased established pain behaviors by shutting down an enzyme system that produces molecules known to amplify pain signals. Next targets: chemotherapy-induced peripheral neuropathy and diabetic neuropathy. No abuse liability. Published January 2026.</div>
+    </div>
+    <div class="dark-card">
+      <div class="dark-card-label">Phase 2 Drug &mdash; UT Dallas, reported KERA News Apr 13</div>
+      <div class="dark-card-text">A non-opioid compound developed from UT Dallas research completed Phase 1 human safety trials at the end of 2025 and is now entering Phase 2 efficacy trials for chronic pain — moving from lab discovery to human testing in under a decade.</div>
+    </div>
+  </div>
+  <p class="source-tag dark-kicker">Sources: ScienceDaily Mar 2026 &bull; Virginia Tech News Jan 2026 &bull; KERA News Apr 13, 2026</p>
+</section>
+
+<!-- ── SPREAD 4: INFOGRAPHIC — Sleep-Pain Cycle ────────── -->
+<section id="sleep" class="spread" style="background:#1a1a2e; color:#f0e6ff;">
+  <p class="kicker infographic-kicker">Science &mdash; The Sleep-Pain Feedback Loop</p>
+  <h2 class="infographic-headline">Pain steals<br>sleep. Sleep<br>feeds pain.</h2>
+  <div class="bars-grid">
+    <div class="bar-row">
+      <div class="bar-label">Chronic pain patients with sleep difficulties</div>
+      <div class="bar-track"><div class="bar-fill" style="width:88%;"></div></div>
+      <div class="bar-value">88%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">People with insomnia who also have chronic pain</div>
+      <div class="bar-track"><div class="bar-fill" style="width:40%;"></div></div>
+      <div class="bar-value">40%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Minimum: chronic pain patients with sleep difficulties</div>
+      <div class="bar-track"><div class="bar-fill" style="width:50%;"></div></div>
+      <div class="bar-value">50%</div>
+    </div>
+  </div>
+  <p class="sleep-pull">
+    "Sleep disturbance may be a stronger predictor of future pain than pain is of future sleep disturbance."
+    <span style="display:block; font-style:normal; font-family:'Inter',sans-serif; font-size:0.62em; letter-spacing:0.1em; text-transform:uppercase; margin-top:0.5rem; opacity:0.65;">— eBioMedicine / The Lancet, 2026 Review</span>
+  </p>
+  <p class="sleep-body">
+    A major 2026 review in <em>eBioMedicine</em> (The Lancet) confirmed what millions of patients already knew in their bodies: pain and sleeplessness form a self-reinforcing loop. New clinical trials are testing digital CBT-I (Cognitive Behavioral Therapy for Insomnia) in chronic pain populations via a 9-week app protocol — aiming to interrupt both the insomnia and the pain simultaneously. Wearable polysomnography combined with machine learning may soon allow real-world tracking of where each patient sits in the cycle, enabling personalized intervention.
+  </p>
+  <p class="source-tag infographic-kicker">Sources: eBioMedicine / The Lancet 2026 &bull; <em>PAIN</em> Journal Jan 2026 &bull; Back2Sleep RCT Protocol, <em>Trials</em> 2025</p>
+</section>
+
+<!-- ── SPREAD 5: RED ALERT — Insurance Denials ─────────── -->
+<section id="insurance" class="spread" style="background:#1a0000; color:#fff;">
+  <p class="kicker alert-kicker">System &mdash; Prior Authorization</p>
+  <h2 class="alert-headline">DENIED.</h2>
+  <div class="alert-badges">
+    <span class="alert-badge">AI-Generated Rejection</span>
+    <span class="alert-badge">No Clinical Review</span>
+    <span class="alert-badge">Step Therapy Required</span>
+    <span class="alert-badge">Pain Treatment</span>
+  </div>
+  <div class="alert-stat-row">
+    <div class="alert-stat-box">
+      <div class="alert-stat-num">7.4%</div>
+      <div class="alert-stat-label">Medicare Advantage prior auth denial rate for pain management procedures in 2025 — up from 5.9% in 2023</div>
+    </div>
+    <div class="alert-stat-box">
+      <div class="alert-stat-num">72 hrs</div>
+      <div class="alert-stat-label">New CMS rule (effective Jan 1, 2026): insurers must decide expedited prior auth requests within 72 hours</div>
+    </div>
+    <div class="alert-stat-box">
+      <div class="alert-stat-num">5</div>
+      <div class="alert-stat-label">States actively reforming prior authorization laws in 2026, including "gold card" exemptions for physicians with clean approval histories</div>
+    </div>
+  </div>
+  <p class="alert-body">
+    The era of "generic rejections" is supposed to be over. The 2024 CMS Interoperability and Prior Authorization rule, in effect since January 1, 2026, requires insurers to provide a specific clinical reason for every denial — including AI-assisted denials — and to publish aggregate approval data. Yet denial rates for pain procedures keep climbing. On KevinMD, physicians published a frank April 2026 essay: prior authorization and step therapy protocols are forcing patients to fail on cheaper, less effective treatments before accessing care their doctors already recommended. The system, one author wrote, is "designed to exhaust rather than help."
+  </p>
+  <p class="source-tag alert-kicker">Sources: KevinMD Apr 2026 &bull; Yahoo Finance / CMS Rule 2026 &bull; DistilINFO Apr 13, 2026 &bull; Pain News Network Feb 2026</p>
+</section>
+
+<!-- ── SPREAD 6: ACADEMIC/DROP-CAP — SSDI ──────────────── -->
+<section id="ssdi" class="spread" style="background:#faf6ef;">
+  <p class="kicker academic-kicker" style="color:#5a4220;">System &mdash; Disability &amp; the Bureaucracy of Pain</p>
+  <h2 class="academic-headline">The Hardest<br>Claim to Win</h2>
+  <div class="academic-columns">
+    <div>
+      <p class="academic-body drop-cap">Pain is subjective. The Social Security Administration is not. In 2026, getting approved for SSDI on the basis of chronic pain alone remains one of the most grueling bureaucratic journeys a sick person can undertake — one that begins with a near-certain denial and ends, for many, after years of appeals.</p>
+      <p class="academic-body">The SSA does not award benefits for "pain" as a diagnosis. Applicants must show a medically determinable impairment — supported by imaging, lab work, or documented functional loss — that could reasonably cause the reported pain, and demonstrate that pain prevents sustained full-time work. The standard is relentlessly functional, not experiential.</p>
+      <p class="academic-body">Most initial SSDI claims for chronic pain are denied. Attorneys and patient advocates consistently advise: document everything, appeal everything, and expect the process to take years. The system, built around acute and terminal conditions, has never been retooled for the tens of millions of Americans whose suffering is real, persistent, and invisible to a scanner.</p>
+      <p class="source-tag academic-kicker" style="color:#5a4220;">Sources: U.S. Pain Foundation &bull; Trajector Disability 2026 &bull; DisabilitySecrets.com &bull; SSA CFR §404.1529</p>
+    </div>
+    <div>
+      <table class="academic-table">
+        <thead>
+          <tr><th>Challenge</th><th>What it means in practice</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pain as sole basis</td><td>Insufficient — must tie to a documented medically determinable impairment</td></tr>
+          <tr><td>Subjective reporting</td><td>SSA weighs objective medical records over patient statements</td></tr>
+          <tr><td>Initial denial rate</td><td>Most chronic pain claims are denied at first review — appeals are the norm, not the exception</td></tr>
+          <tr><td>Appeal window</td><td>60 days per denial level — missing it restarts the clock entirely</td></tr>
+          <tr><td>Fibromyalgia / CRPS</td><td>Recognized by SSA but require extensive functional documentation; still regularly denied</td></tr>
+          <tr><td>Mental health intersection</td><td>Depression and anxiety comorbidities can strengthen a claim but may also be used to minimize physical basis</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── SPREAD 7: TERMINAL — RFA Reddit Data ─────────────── -->
+<section id="rfa" class="spread" style="background:#0a0f0a; color:#00ff41; font-family:'Courier New',monospace;">
+  <p class="terminal-prompt">$ analyze --source=reddit --procedure="radiofrequency-ablation" --output=patient-themes</p>
+  <h2 class="terminal-headline">WHAT REDDIT<br>SAYS ABOUT<br>RFA<span class="cursor"></span></h2>
+  <p class="terminal-body">
+    A peer-reviewed data analysis (ScienceDirect / PubMed, 2025) coded Reddit posts discussing radiofrequency ablation — a procedure that burns nerve endings to interrupt chronic pain signals, most commonly used for facet joint and back pain. The patient picture that emerged: cautious hope, significant variability, and a lot of fighting the system to access it.
+  </p>
+  <div class="terminal-block">
+    <div class="terminal-block-label">// themes extracted from reddit rfa discourse — research synthesis</div>
+    <div class="terminal-line"><span class="terminal-key">THEME_01:</span><span class="terminal-val">Outcomes highly variable — complete relief reported alongside no benefit</span></div>
+    <div class="terminal-line"><span class="terminal-key">THEME_02:</span><span class="terminal-val">Insurance prior-auth delays frequently cited before procedure approved</span></div>
+    <div class="terminal-line"><span class="terminal-key">THEME_03:</span><span class="terminal-val">Pain returns after 6–18 months for most; repeat procedures widely discussed</span></div>
+    <div class="terminal-line"><span class="terminal-key">THEME_04:</span><span class="terminal-val">Patients compare providers extensively — perceived skill gap is wide</span></div>
+    <div class="terminal-line"><span class="terminal-key">THEME_05:</span><span class="terminal-val">Emotional labor of advocating for the procedure before it is offered</span></div>
+    <div class="terminal-line"><span class="terminal-key">CONSENSUS:</span><span class="terminal-val">Legitimate treatment, but inconsistently accessible and inconsistently effective</span></div>
+  </div>
+  <p class="terminal-body" style="opacity:0.65; font-size:0.82rem; margin-top:0.5rem;">
+    Source: "Reddit users' perspectives on radiofrequency ablation: A data analysis" — ScienceDirect 2025, PubMed ID 39811075. r/ChronicPain and related communities analyzed.
+  </p>
+</section>
+
+<!-- ── SPREAD 8: ROSE/ALERT/STAMP — Invisible Illness ───── -->
+<section id="invisible" class="spread" style="background:#fdf0f0; position:relative; overflow:hidden;">
+  <div class="stamp-watermark">DISPUTED</div>
+  <p class="kicker rose-kicker">Identity &mdash; Invisible Illness Disbelief</p>
+  <div class="rose-stamp">Community Backlash &mdash; April 10, 2026</div>
+  <h2 class="rose-headline">The Doctor<br>Said It's<br>Not Real.</h2>
+  <div class="rose-conditions">
+    <span class="rose-tag">Ehlers-Danlos Syndrome</span>
+    <span class="rose-tag">MCAS</span>
+    <span class="rose-tag">POTS</span>
+    <span class="rose-tag">Lyme Disease</span>
+  </div>
+  <p class="rose-body">
+    On April 10, 2026, Pain News Network reported that a physician with over 20,000 followers — who teaches at Harvard Medical School — posted that four chronic illnesses were "overdiagnosed": Ehlers-Danlos syndrome (EDS), Mast Cell Activation Syndrome (MCAS), Postural Orthostatic Tachycardia Syndrome (POTS), and Lyme disease. The backlash from patient communities was immediate and overwhelming.
+  </p>
+  <p class="rose-pull">
+    For people who spent years being dismissed before finally getting a diagnosis, the post wasn't a medical opinion. It was a wound reopened.
+  </p>
+  <p class="rose-body">
+    EDS, MCAS, POTS, and Lyme are conditions that disproportionately affect women — people whose symptoms were historically minimized, attributed to anxiety, or met with shrugs. The communities built around these diagnoses on Reddit and elsewhere aren't fringe groups. They are survival infrastructure for patients whose doctors failed them. "Overdiagnosed" lands differently when you remember the years of being told you were "overreacting."
+  </p>
+  <p class="source-tag rose-kicker">Source: Pain News Network, April 10, 2026 &bull; painnewsnetwork.org</p>
+</section>
+
+<!-- ── SPREAD 9: BROADSHEET — Legislation ──────────────── -->
+<section id="legislation" class="spread" style="background:#fff; border-top:6px solid #1a1a1a;">
+  <div class="broadsheet-top">
+    <div class="broadsheet-publication">The Pain Issue</div>
+    <div class="broadsheet-date">Policy Desk &mdash; April 16, 2026</div>
+  </div>
+  <h2 class="broadsheet-headline">Congress Has<br>a Pain Bill.<br>Does It Have<br>the Votes?</h2>
+  <hr class="broadsheet-rule">
+  <div class="broadsheet-cols">
+    <div>
+      <div class="broadsheet-col-head">The Bill</div>
+      <div class="broadsheet-col-body">The Relief of Chronic Pain Act of 2025 (S. 3064) is a bipartisan Senate bill that would remove key Medicare Part D barriers to non-opioid therapies for chronic pain. Under current Medicare rules, non-opioid alternatives face formulary restrictions and cost-sharing disadvantages that make opioids the path of least resistance — not because they work better, but because the system pays for them more readily.</div>
+    </div>
+    <div>
+      <div class="broadsheet-col-head">What It Changes</div>
+      <div class="broadsheet-col-body">S. 3064 would require Medicare Part D plans to cover non-opioid pain treatments without step-therapy requirements that currently force patients to "fail first" on cheaper drugs. It would also remove financial formulary incentives that favor opioid prescribing over alternatives. Patient advocates call it the most consequential pain policy reform in a generation.</div>
+    </div>
+    <div>
+      <div class="broadsheet-col-head">The Momentum</div>
+      <div class="broadsheet-col-body">MedCity News published a forceful April 2026 op-ed urging congressional action, noting the bill has both Democratic and Republican cosponsors. With gene therapy, enzyme-blocking compounds, and Phase 2 drugs all nearing readiness, advocates argue the policy infrastructure needs to be built now — before the treatments arrive and can't be paid for.</div>
+    </div>
+  </div>
+  <div class="broadsheet-aside">
+    <div class="broadsheet-aside-head">WHO Opioid Guidelines Update &mdash; April 2, 2026</div>
+    <div class="broadsheet-aside-body">The World Health Organization released updated guidance on opioid dependence treatment, reaffirming opioid agonist maintenance treatment (OAMT) as the recommended standard and signaling broader revisions on overdose prevention due later in 2026 or early 2027. The full updated guidelines will include implementation guidance for low- and middle-income countries where treatment access remains severely limited. Source: WHO / PAHO, April 2, 2026.</div>
+  </div>
+  <p class="source-tag">Sources: MedCity News Apr 2026 &bull; medcitynews.com &bull; WHO/PAHO Apr 2, 2026</p>
+</section>
+
+<!-- ── SPREAD 10: WARM EDITORIAL — Closing ─────────────── -->
+<section id="community" class="spread" style="background:#f5f0e8;">
+  <p class="kicker warm-kicker">Community &mdash; This Week</p>
+  <div class="warm-layout">
+    <div class="warm-giant">40+</div>
+    <div>
+      <h2 class="warm-headline">Forty Experts.<br>One Table.<br>Women's Pain<br>Finally Centered.</h2>
+      <p class="warm-body">
+        On April 13, 2026, the Chronic Pain Centre of Excellence for Canadian Veterans — in partnership with the Canadian Pain Society — convened a first-of-its-kind national roundtable on women's chronic pain. More than 40 leading researchers, clinicians, and patient advocates gathered to build a research agenda that has been neglected for too long.
+      </p>
+      <p class="warm-body">
+        Women with chronic pain have been undertreated, under-researched, and over-dismissed. This roundtable represents a structural shift: institutions formally acknowledging that the gender gap in pain care is a policy problem requiring policy solutions — not just a clinical one. If you have ever been told your pain wasn't real, this table was, in part, for you.
+      </p>
+      <div class="warm-timeline">
+        <div class="warm-timeline-item">
+          <div class="warm-timeline-date">Apr 1</div>
+          <div class="warm-timeline-text">Stanford publishes landmark brain circuit study in <em>Nature</em> — chronic and acute pain use separate, targetable pathways</div>
+        </div>
+        <div class="warm-timeline-item">
+          <div class="warm-timeline-date">Apr 10</div>
+          <div class="warm-timeline-text">Harvard physician's "overdiagnosed" post triggers widespread backlash from EDS, MCAS, POTS, and Lyme communities</div>
+        </div>
+        <div class="warm-timeline-item">
+          <div class="warm-timeline-date">Apr 13</div>
+          <div class="warm-timeline-text">Canada national roundtable on women's chronic pain — 40+ experts convene for the first time at a national level</div>
+        </div>
+        <div class="warm-timeline-item">
+          <div class="warm-timeline-date">Apr 16</div>
+          <div class="warm-timeline-text"><em>The Pain Issue</em>, Edition 2 — you are here. Find past editions in the archive.</div>
+        </div>
+      </div>
+      <p class="source-tag warm-kicker" style="margin-top:1.5rem;">Source: GlobeNewswire / Canadian Pain Society, April 14, 2026 &bull; globenewswire.com</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

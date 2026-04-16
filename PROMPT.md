@@ -39,7 +39,7 @@ If web search returns very little new material for a theme, skip it and pick ano
 
 ## Step 4: Build the Magazine
 
-Generate `magazine.html` (overwriting the previous edition) following these design rules:
+Generate `editions/edition-N.html` (where N is the new edition number) following these design rules:
 
 - **Fonts**: Fraunces (serif, display) + Inter (sans) via Google Fonts
 - **Typography**: Huge display type everywhere. No font smaller than ~1rem. Headlines at 3–14rem using clamp().
@@ -64,14 +64,57 @@ Assign spread styles to stories so that the visual sequence feels varied — nev
 - Include a **closing spread** as spread 10 with a call to action
 - Add fixed nav dots on the right edge
 
-## Step 5: Archive & Update State
+## Step 5: Update Index, Archive & State
 
-1. Copy the new `magazine.html` to `editions/edition-N.html` (where N is the edition number)
-2. Update `editions/state.json`:
+1. Update `index.html` at the repo root — change the `meta http-equiv="refresh"` URL and the fallback link text/href to point to `editions/edition-N.html`.
+2. Update `editions/index.html` — prepend a new `<li>` entry for this edition above the previous most-recent entry. Format:
+   ```html
+   <li><a href="edition-N.html"><span class="edition-label">Edition N</span><span class="edition-date">YYYY-MM-DD</span></a></li>
+   ```
+3. Update `editions/state.json`:
    - Increment `last_edition.number`
    - Update `last_edition.date` to today
+   - Update `last_edition.output_file` to `editions/edition-N.html`
    - Append all new quotes, stats, URLs, and angles to `used_content`
    - Remove entries older than 10 editions from `used_content` to prevent unbounded growth (keep the last 10 editions' worth of content only)
+
+## Step 6: Notify Slack (optional)
+
+If the environment variable `SLACK_WEBHOOK_URL` is set, send a notification to the Slack channel by running:
+
+```bash
+curl -s -o /dev/null -X POST "$SLACK_WEBHOOK_URL" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "*The Pain Issue — Edition N is live*",
+    "blocks": [
+      {
+        "type": "section",
+        "text": {
+          "type": "mrkdwn",
+          "text": "*The Pain Issue — Edition N*\n_Published YYYY-MM-DD_\n\n• [teaser stat or headline 1]\n• [teaser stat or headline 2]\n• [teaser stat or headline 3]"
+        }
+      },
+      {
+        "type": "actions",
+        "elements": [
+          {
+            "type": "button",
+            "text": { "type": "plain_text", "text": "Read Edition N" },
+            "url": "BASE_URL/editions/edition-N.html"
+          },
+          {
+            "type": "button",
+            "text": { "type": "plain_text", "text": "Browse Archive" },
+            "url": "BASE_URL/editions/"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+Replace `BASE_URL` with the value of `base_url` from `state.json`. Substitute real teasers (2–3 stats or headline fragments from the edition you just generated). If `SLACK_WEBHOOK_URL` is not set, skip this step silently.
 
 ## Content Rules
 
