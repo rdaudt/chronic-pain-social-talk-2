@@ -1,9 +1,9 @@
 {
   "base_url": "https://rdaudt.github.io/chronic-pain-social-talk-2",
   "last_edition": {
-    "number": 2,
-    "date": "2026-04-16",
-    "output_file": "editions/edition-2.html"
+    "number": 3,
+    "date": "2026-05-04",
+    "output_file": "editions/edition-3.html"
   },
   "used_content": {
     "quotes": [
@@ -12,7 +12,13 @@
       "Doctor outranked all other words with 624 mentions across posts",
       "Acute pain and chronic pain can be completely separate.",
       "Pain steals sleep. Sleep feeds pain.",
-      "The system is designed to exhaust rather than help."
+      "The system is designed to exhaust rather than help.",
+      "DFNZ has an unprecedented pharmacology for an opioid. It is a potent and high-efficacy analgesic, but in certain contexts it resembles partial agonists — which is what scientists think is needed for safety.",
+      "Opioid pain medications are essential for medical purposes, but can lead to addiction and overdose. Developing a highly effective pain medication without these drawbacks would have enormous public health benefits.",
+      "Our work helps visualize what has long been invisible or ignored, validates patients' experiences with neuroscientific evidence, and shows that the pain they feel is real, measurable and rooted in brain function.",
+      "LDN may operate as a novel anti-inflammatory agent in the central nervous system, via action on microglial cells.",
+      "The likelihood of experiencing functional limitations in daily life was highest among those experiencing co-occurring symptoms, compared with those experiencing chronic pain alone.",
+      "Many commenters expressed that due to decreases in the aggregate production quotas for oxycodone and hydrocodone, they have had difficulty filling legitimate prescriptions, with delays or the need to visit multiple pharmacies."
     ],
     "statistics": [
       "50 million Americans with chronic pain",
@@ -32,7 +38,23 @@
       "88% of chronic pain patients have sleep difficulties",
       "40% of people with insomnia also have chronic pain",
       "40+ experts at Canada women's chronic pain roundtable April 13 2026",
-      "2 separate brain circuits for acute vs chronic pain (Stanford/Nature April 2026)"
+      "2 separate brain circuits for acute vs chronic pain (Stanford/Nature April 2026)",
+      "39.3% pooled depression prevalence in chronic pain (JAMA Network Open 2025, 376 studies, 347,468 patients, 50 countries)",
+      "40.2% pooled anxiety prevalence in chronic pain (JAMA Network Open 2025)",
+      "12 million US adults with co-occurring chronic pain and anxiety/depression",
+      "23.9% of US adults with chronic pain have unremitted anxiety/depression",
+      "1 in 3 youth with chronic pain meets criteria for anxiety disorder",
+      "6.24% reduction in oxycodone aggregate production quota 2026 (DEA, 10th consecutive year)",
+      "60 million Americans affected by chronic pain (2026 estimate)",
+      "245-person traumatic injury cohort: men reported less pain at 12 weeks (MSU, Science Immunology 2026)",
+      "2 of 3 CRPS patients began migraines after CRPS onset (Australian cohort, 88 patients, Frontiers Neurology 2026)",
+      "DFNZ analgesic effect persists 2 hours with 5-10 minute brain exposure (NIH, Nature April 2026)",
+      "71% of chronic pain patients support federal cannabis legalization vs 59% of physicians (ScienceDaily 2024)",
+      "7 states could still legalize cannabis in 2026",
+      "LDN dose 1.5-4.5mg therapeutic range vs 50mg for addiction treatment",
+      "LDN + ketamine NRS drop from 7-10/10 to 3-5/10",
+      "5.5 million veterans receive VHA care annually (no prior authorization for pain treatment)",
+      "55.6% of US adults with unremitted anxiety/depression also have chronic pain"
     ],
     "source_urls": [
       "https://www.painnewsnetwork.org/stories/2026/3/18/reflecting-on-13-years-of-chronic-pain",
@@ -52,7 +74,24 @@
       "https://medcitynews.com/2026/04/join-the-fight-against-chronic-pain-its-time-for-breakthrough-legislation-in-congress/",
       "https://www.globenewswire.com/news-release/2026/04/14/3273863/0/en/National-Roundtable-Advances-Women-s-Health-and-Chronic-Pain-Research-in-Canada.html",
       "https://www.who.int/news/item/02-04-2026-who-updates-guidelines-on-opioid-dependence-treatment-and-overdose-prevention",
-      "https://www.sciencedirect.com/science/article/pii/S2772594424001560"
+      "https://www.sciencedirect.com/science/article/pii/S2772594424001560",
+      "https://www.nih.gov/news-events/news-releases/nih-researchers-discover-pain-relieving-drug-minimal-addictive-properties",
+      "https://nida.nih.gov/news-events/news-releases/2026/4/nih-researchers-discover-pain-relieving-drug-with-minimal-addictive-properties",
+      "https://msutoday.msu.edu/news/2026/02/why-chronic-pain-lasts-longer-in-women",
+      "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2831134",
+      "https://www.painnewsnetwork.org/stories/2026/1/5/dea-cuts-oxycodone-supply-but-raises-production-of-morphine-in-surprise-move",
+      "https://www.federalregister.gov/documents/2026/01/05/2025-24277/established-aggregate-production-quotas-for-schedule-i-and-ii-controlled-substances",
+      "https://www.cmu.edu/news/stories/archives/2026/february/carnegie-mellon-researchers-rethink-chronic-pain",
+      "https://www.mdpi.com/2075-4426/16/3/151",
+      "https://www.nature.com/articles/s41598-025-32101-y",
+      "https://www.mdpi.com/1422-0067/27/1/114",
+      "https://www.sciencedaily.com/releases/2024/10/241002135234.htm",
+      "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1776543/full",
+      "https://www.painnewsnetwork.org/stories/2026/2/25/why-does-chronic-pain-last-longer-for-women-blame-hormones",
+      "https://www.justice.gov/opa/pr/justice-department-places-fda-approved-marijuana-products-and-products-containing-marijuana",
+      "https://www.frontiersin.org/journals/pain-research/articles/10.3389/fpain.2025.1626515/full",
+      "https://kevinmd.com/2026/04/how-cdc-opioid-guidelines-harmed-chronic-pain-patients",
+      "https://www.acsh.org/news/2026/04/02/prescription-opioid-analgesics-are-safe-and-effective-pain-millions-acute-and"
     ],
     "story_angles": [
       "prevalence-big-stat",
@@ -73,7 +112,16 @@
       "radiofrequency-ablation-perspectives",
       "invisible-illness-disbelief",
       "pain-patient-advocacy-groups",
-      "mutual-aid-resource-sharing"
+      "mutual-aid-resource-sharing",
+      "central-sensitization-explained",
+      "genetics-of-pain-sensitivity",
+      "mental-health-intersection",
+      "pharmacy-refusal-stories",
+      "gut-brain-pain-axis",
+      "dea-scheduling-changes",
+      "veterans-pain-care",
+      "low-dose-naltrexone",
+      "pain-neuroscience-education"
     ]
   },
   "theme_pool": {
