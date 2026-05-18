@@ -1,9 +1,9 @@
 {
   "base_url": "https://rdaudt.github.io/chronic-pain-social-talk-2",
   "last_edition": {
-    "number": 3,
-    "date": "2026-05-04",
-    "output_file": "editions/edition-3.html"
+    "number": 4,
+    "date": "2026-05-18",
+    "output_file": "editions/edition-4.html"
   },
   "used_content": {
     "quotes": [
@@ -18,7 +18,12 @@
       "Our work helps visualize what has long been invisible or ignored, validates patients' experiences with neuroscientific evidence, and shows that the pain they feel is real, measurable and rooted in brain function.",
       "LDN may operate as a novel anti-inflammatory agent in the central nervous system, via action on microglial cells.",
       "The likelihood of experiencing functional limitations in daily life was highest among those experiencing co-occurring symptoms, compared with those experiencing chronic pain alone.",
-      "Many commenters expressed that due to decreases in the aggregate production quotas for oxycodone and hydrocodone, they have had difficulty filling legitimate prescriptions, with delays or the need to visit multiple pharmacies."
+      "Many commenters expressed that due to decreases in the aggregate production quotas for oxycodone and hydrocodone, they have had difficulty filling legitimate prescriptions, with delays or the need to visit multiple pharmacies.",
+      "Converging evidence reframes chronic pain as a disorder maintained by maladaptive neuroimmune interactions across the peripheral and central nervous systems.",
+      "Some agreements are stigmatizing or coercive and jeopardize trust, with content varying widely and efficacy uncertain.",
+      "Doctors aren't really equipped to use their standard diagnostic and treatment toolkit for chronic pain.",
+      "Adding a loved one's chronic pain to the relationship magnifies the difficulty and intensifies the stress.",
+      "Caregiving raises the risk of stress-related illness, mental-health problems, and delayed health-care use — a public-health issue."
     ],
     "statistics": [
       "50 million Americans with chronic pain",
@@ -54,7 +59,20 @@
       "LDN dose 1.5-4.5mg therapeutic range vs 50mg for addiction treatment",
       "LDN + ketamine NRS drop from 7-10/10 to 3-5/10",
       "5.5 million veterans receive VHA care annually (no prior authorization for pain treatment)",
-      "55.6% of US adults with unremitted anxiety/depression also have chronic pain"
+      "55.6% of US adults with unremitted anxiety/depression also have chronic pain",
+      "20-30% of family caregivers in active burnout at any given time (Edition 4)",
+      "60%+ of caregivers experience burnout symptoms (Edition 4)",
+      "11-38% of children and adolescents cope with chronic pain daily (Edition 4)",
+      "1 in 5 school days missed by children with chronic pain (Edition 4)",
+      "34% less likely to graduate high school with adolescent-onset chronic pain (Edition 4)",
+      "17% less likely to attain college degree with adolescent-onset chronic pain (Edition 4)",
+      "72-90% SCS trial success rate; 65-80% maintain meaningful pain relief long-term (JAMA 2026, Edition 4)",
+      "52 blood markers predict chronic pain conditions and self-reported severity (Nature Human Behaviour 2025, Edition 4)",
+      "First new fibromyalgia therapy in 15+ years: Tonmya (cyclobenzaprine HCl sublingual) FDA approved August 2025 (Edition 4)",
+      "70% of high-impact chronic pain VR therapy patients reclassified as low-impact at 2-year follow-up (JMIR 2026, Edition 4)",
+      "Georgia SB 220 signed May 13 2026: intractable pain added to medical cannabis qualifying conditions (Edition 4)",
+      "40 medical cannabis states allow some pain qualification (Edition 4)",
+      "Dec 2026: DEA/HHS telemedicine ketamine prescribing flexibilities expire (Edition 4)"
     ],
     "source_urls": [
       "https://www.painnewsnetwork.org/stories/2026/3/18/reflecting-on-13-years-of-chronic-pain",
@@ -91,7 +109,31 @@
       "https://www.justice.gov/opa/pr/justice-department-places-fda-approved-marijuana-products-and-products-containing-marijuana",
       "https://www.frontiersin.org/journals/pain-research/articles/10.3389/fpain.2025.1626515/full",
       "https://kevinmd.com/2026/04/how-cdc-opioid-guidelines-harmed-chronic-pain-patients",
-      "https://www.acsh.org/news/2026/04/02/prescription-opioid-analgesics-are-safe-and-effective-pain-millions-acute-and"
+      "https://www.acsh.org/news/2026/04/02/prescription-opioid-analgesics-are-safe-and-effective-pain-millions-acute-and",
+      "https://www.medfinder.com/blog/ketamine-shortage-update-what-patients-need-to-know-in-2026",
+      "https://www.atlantanewsfirst.com/2026/05/13/kemp-signs-bill-expand-georgias-medical-marijuana-laws-allow-vaping-patients/",
+      "https://www.cannabisbusinesstimes.com/legislation-and-regulation/adult-use-legalization-bill/news/15820227/7-states-that-could-still-legalize-cannabis-in-2026",
+      "https://www.frierlevitt.com/articles/cannabis-schedule-iii-rescheduling-impact-tax-banking-research/",
+      "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2826172",
+      "https://www.neurologylive.com/view/sustained-pain-relief-without-implant-exploring-durability-spinal-cord-stimulation-trials",
+      "https://www.frontiersin.org/journals/pain-research/articles/10.3389/fpain.2026.1727882/full",
+      "https://uspainfoundation.org/news/caregiver-burnout-a-side-effect-of-chronic-pain-that-cant-be-ignored/",
+      "https://www.simplypsychology.com/articles/caregiver-burnout-guide",
+      "https://www.frontiersin.org/journals/pain-research/articles/10.3389/fpain.2026.1760356/full",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11864317/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7001863/",
+      "https://www.nature.com/articles/s41562-025-02156-y",
+      "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2026.1823031/full",
+      "https://medicine.yale.edu/news-article/inflammation-may-be-the-link-between-chronic-pain-and-depression/",
+      "https://onlinelibrary.wiley.com/doi/10.1111/1468-0009.12699",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11576586/",
+      "https://www.ccjm.org/content/83/11/827",
+      "https://www.pharmacytimes.com/view/fda-approves-tonmya-first-treatment-for-fibromyalgia-in-over-15-years",
+      "https://www.jmir.org/2026/1/e90688",
+      "https://www.sciencedaily.com/releases/2026/04/260426012317.htm",
+      "https://podcasts.apple.com/us/podcast/the-er-nightmare-for-chronic-pain-patients/id1839953030?i=1000740235155",
+      "https://clearchoiceer.com/when-chronic-pain-requiresa-trip-to-the-emergency-room/",
+      "https://www.safeaccessnow.org/2025_federal_cannabis_policy"
     ],
     "story_angles": [
       "prevalence-big-stat",
@@ -121,7 +163,17 @@
       "dea-scheduling-changes",
       "veterans-pain-care",
       "low-dose-naltrexone",
-      "pain-neuroscience-education"
+      "pain-neuroscience-education",
+      "ketamine-clinics-access",
+      "cannabis-access-state-laws",
+      "spinal-cord-stimulators-debate",
+      "er-visits-chronic-pain",
+      "caregiver-burnout-partners",
+      "young-people-chronic-pain",
+      "inflammation-markers",
+      "pain-contract-controversies",
+      "biopsychosocial-model-debate",
+      "community-wins-success-stories"
     ]
   },
   "theme_pool": {
