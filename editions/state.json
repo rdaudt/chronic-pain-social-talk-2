@@ -1,9 +1,9 @@
 {
   "base_url": "https://rdaudt.github.io/chronic-pain-social-talk-2",
   "last_edition": {
-    "number": 4,
-    "date": "2026-05-18",
-    "output_file": "editions/edition-4.html"
+    "number": 5,
+    "date": "2026-05-25",
+    "output_file": "editions/edition-5.html"
   },
   "used_content": {
     "quotes": [
@@ -23,7 +23,11 @@
       "Some agreements are stigmatizing or coercive and jeopardize trust, with content varying widely and efficacy uncertain.",
       "Doctors aren't really equipped to use their standard diagnostic and treatment toolkit for chronic pain.",
       "Adding a loved one's chronic pain to the relationship magnifies the difficulty and intensifies the stress.",
-      "Caregiving raises the risk of stress-related illness, mental-health problems, and delayed health-care use — a public-health issue."
+      "Caregiving raises the risk of stress-related illness, mental-health problems, and delayed health-care use — a public-health issue.",
+      "The losses involved in experiences of chronic pain impact one's practical identity in ways that can lead to grief.",
+      "The psychosocial context accompanying treatment administration can influence therapeutic outcomes positively — or negatively.",
+      "Catastrophizing, fear of pain, and emotional distress are associated with smaller placebo effects and larger nocebo effects.",
+      "Parenting a child with chronic pain is uniquely difficult not only because it is uncomfortable to see your child experience persistent pain and suffering, but also because it's often unclear how to help."
     ],
     "statistics": [
       "50 million Americans with chronic pain",
@@ -72,7 +76,21 @@
       "70% of high-impact chronic pain VR therapy patients reclassified as low-impact at 2-year follow-up (JMIR 2026, Edition 4)",
       "Georgia SB 220 signed May 13 2026: intractable pain added to medical cannabis qualifying conditions (Edition 4)",
       "40 medical cannabis states allow some pain qualification (Edition 4)",
-      "Dec 2026: DEA/HHS telemedicine ketamine prescribing flexibilities expire (Edition 4)"
+      "Dec 2026: DEA/HHS telemedicine ketamine prescribing flexibilities expire (Edition 4)",
+      "93% of 2,500+ patients and providers said CDC opioid guidelines made pain care worse (Edition 5)",
+      "85% of same survey said CDC should not have created opioid prescribing guidelines (Edition 5)",
+      "$650M Medtronic acquisition of SPR Therapeutics announced May 20, 2026 (Edition 5)",
+      "6,100+ patients treated with SPRINT PNS System in real-world use (Edition 5)",
+      "749 adults with chronic low back pain in 2026 Annals of Internal Medicine PT study (Edition 5)",
+      "No significant change in pain intensity vs CBT/mindfulness in 2026 PT trial (Edition 5)",
+      "Medicare telehealth extended through December 31, 2027 (Consolidated Appropriations Act 2026, Edition 5)",
+      "DEA/HHS controlled substance telemedicine prescribing extended through December 31, 2026 (Edition 5)",
+      "In-person behavioral health requirement deferred to January 1, 2028 (Edition 5)",
+      "275 participants in PROSPER-FM Phase 3 digital ACT fibromyalgia trial (Lancet, Edition 5)",
+      "12-week Stanza app trial improved 6 domains vs active control: pain intensity, interference, fatigue, sleep, depression, physical function (Edition 5)",
+      "Remote work = #1 most-requested workplace accommodation in US 2026 (AbsenceSoft, Edition 5)",
+      "Chronic physical conditions = most common driver of accommodation requests 2026 (AbsenceSoft, Edition 5)",
+      "SPRINT PNS System: 60-day temporary therapy, no permanent implant (Edition 5)"
     ],
     "source_urls": [
       "https://www.painnewsnetwork.org/stories/2026/3/18/reflecting-on-13-years-of-chronic-pain",
@@ -133,7 +151,34 @@
       "https://www.sciencedaily.com/releases/2026/04/260426012317.htm",
       "https://podcasts.apple.com/us/podcast/the-er-nightmare-for-chronic-pain-patients/id1839953030?i=1000740235155",
       "https://clearchoiceer.com/when-chronic-pain-requiresa-trip-to-the-emergency-room/",
-      "https://www.safeaccessnow.org/2025_federal_cannabis_policy"
+      "https://www.safeaccessnow.org/2025_federal_cannabis_policy",
+      "https://link.springer.com/article/10.1007/s11019-026-10333-7",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13086747/",
+      "https://www.ajmc.com/view/the-10th-anniversary-of-the-cdc-s-opioid-prescribing-guidelines-new-evidence-and-patient-centered-decisions",
+      "https://www.painnewsnetwork.org/stories/2026/2/3/cdc-opioid-guideline-raised-cost-of-pain-care",
+      "https://www.hcintellect.com/post/2026-telehealth-policy-update-medicare-flexibilities-extended",
+      "https://www.hklaw.com/en/insights/publications/2026/01/dea-and-hhs-extend-telemedicine-prescribing-flexibilities-through-2026",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11881763/",
+      "https://www.painnewsnetwork.org/stories/2026/1/14/medicare-plans-to-end-most-telehealth-coverage-soon",
+      "https://www.painnewsnetwork.org/stories/2026/4/21/physical-therapy-provides-only-modest-improvements-to-low-back-pain",
+      "https://news.medtronic.com/2026-05-20-Medtronic-announces-intent-to-acquire-SPR-Therapeutics,-Inc-,-expanding-care-options-for-people-living-with-chronic-pain",
+      "https://www.massdevice.com/medtronic-acquire-pns-developer-spr-therapeutics/",
+      "https://www.fiercebiotech.com/medtech/medtronic-inks-650m-deal-spr-therapeutics",
+      "https://orthospinenews.com/2026/05/20/medtronic-announces-intent-to-acquire-spr-therapeutics-inc-expanding-care-options-for-people-living-with-chronic-pain/",
+      "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)00909-7/abstract",
+      "https://www.thelancet.com/journals/lanrhe/article/PIIS2665-9913(26)00051-2/fulltext",
+      "https://swingtherapeutics.com/swing-therapeutics-the-lancet-fibromyalgia-stanza/",
+      "https://www.michiganmedicine.org/health-lab/reduce-chronic-pain-new-digital-program-could-help",
+      "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1752434/full",
+      "https://www.iasp-pain.org/resources/fact-sheets/placebo-and-nocebo-effects-the-importance-of-treatment-expectations-and-patient-physician-interaction-for-treatment-outcomes/",
+      "https://www.mdpi.com/2227-9067/13/1/63",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6502461/",
+      "https://www.iasp-pain.org/publications/relief-news/article/confidence-compassion-child-pain/",
+      "https://www.beyondthebodypsych.com/blog/parenting-with-pain-amp-illness-parenting-through-a-flare",
+      "https://absencesoft.com/resources/how-employee-accommodations-are-changing-in-2026/",
+      "https://askjan.org/disabilities/Chronic-Pain.cfm",
+      "https://www.rthm.com/resources/blogs/workplace-accommodations-chronic-illness",
+      "https://www.trajectordisability.com/chronic-pain-ssdi-guide/"
     ],
     "story_angles": [
       "prevalence-big-stat",
@@ -173,7 +218,16 @@
       "inflammation-markers",
       "pain-contract-controversies",
       "biopsychosocial-model-debate",
-      "community-wins-success-stories"
+      "community-wins-success-stories",
+      "grief-for-former-self",
+      "cdc-guidelines-impact",
+      "telehealth-pain-management",
+      "physical-therapy-frustration",
+      "nerve-block-experiences",
+      "pain-psychology-cbt-act",
+      "placebo-nocebo-effects",
+      "parenting-through-flares",
+      "ada-workplace-accommodations"
     ]
   },
   "theme_pool": {
