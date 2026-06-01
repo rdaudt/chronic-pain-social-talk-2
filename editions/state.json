@@ -1,9 +1,9 @@
 {
   "base_url": "https://rdaudt.github.io/chronic-pain-social-talk-2",
   "last_edition": {
-    "number": 5,
-    "date": "2026-05-25",
-    "output_file": "editions/edition-5.html"
+    "number": 6,
+    "date": "2026-06-01",
+    "output_file": "editions/edition-6.html"
   },
   "used_content": {
     "quotes": [
@@ -27,7 +27,13 @@
       "The losses involved in experiences of chronic pain impact one's practical identity in ways that can lead to grief.",
       "The psychosocial context accompanying treatment administration can influence therapeutic outcomes positively — or negatively.",
       "Catastrophizing, fear of pain, and emotional distress are associated with smaller placebo effects and larger nocebo effects.",
-      "Parenting a child with chronic pain is uniquely difficult not only because it is uncomfortable to see your child experience persistent pain and suffering, but also because it's often unclear how to help."
+      "Parenting a child with chronic pain is uniquely difficult not only because it is uncomfortable to see your child experience persistent pain and suffering, but also because it's often unclear how to help.",
+      "Medicare has denied payment for any epidural steroid injections since the rollout, even for procedures with valid authorization numbers.",
+      "Social justice issues need to be considered along with issues of autonomy, beneficence, and nonmaleficence — and whether mandated testing represents a breach of Fourth and Fourteenth Amendment rights.",
+      "The stress test of a chronic condition acts as a filter, leaving you with a partner who is exceptionally empathetic and committed.",
+      "Greater illness disclosure was consistently linked to better health and relational outcomes, particularly when the partner responds with genuine care, validation, and interest.",
+      "Chronic pain weakens work identity and confidence, while stigma and unsupportive workplace cultures hinder communication and accommodations.",
+      "By targeting the precise brain circuits that morphine acts on, we believe this is a first step in offering new relief for people whose lives are upended by chronic pain."
     ],
     "statistics": [
       "50 million Americans with chronic pain",
@@ -90,7 +96,31 @@
       "12-week Stanza app trial improved 6 domains vs active control: pain intensity, interference, fatigue, sleep, depression, physical function (Edition 5)",
       "Remote work = #1 most-requested workplace accommodation in US 2026 (AbsenceSoft, Edition 5)",
       "Chronic physical conditions = most common driver of accommodation requests 2026 (AbsenceSoft, Edition 5)",
-      "SPRINT PNS System: 60-day temporary therapy, no permanent implant (Edition 5)"
+      "SPRINT PNS System: 60-day temporary therapy, no permanent implant (Edition 5)",
+      "31% of chronic pain patients wait over one year for a pain clinic appointment (Edition 6)",
+      "83% of patients want appointment within 3 months; only 32% get it (Edition 6)",
+      "Only 25% of people with chronic pain receive specialized pain management (Edition 6)",
+      "94% of waiting chronic pain patients report interference with daily activities (Edition 6)",
+      "17 procedures requiring Medicare prior authorization under WISeR in 6 states, Jan 2026 (Edition 6)",
+      "WISeR pilot approval timelines: 4-8 weeks in Washington state, up from 2 weeks (Edition 6)",
+      "WISeR pilot runs through December 2031 (Edition 6)",
+      "49% reduction in documented opioid misuse with universal UDS programs (Edition 6)",
+      "Only 6.9% of PCPs test before prescribing opioids (Edition 6)",
+      "Only 15% test patients already on chronic opioid therapy (Edition 6)",
+      "60-65% initial SSDI denial rate for chronic pain claims (Edition 6)",
+      "28 million UK adults with chronic pain; 8 million with disabling levels (Edition 6)",
+      "$16.78 billion US compounding pharmacy market 2026 (Edition 6)",
+      "Pain management = 32%+ of compounding pharmacy revenue (Edition 6)",
+      "90%+ of US ketamine prescriptions filled by compounding pharmacies 2017-2023 (Edition 6)",
+      "Ketamine market: ~$750M today to $3.42B by 2035 at 16.4% CAGR (Edition 6)",
+      "25+ states with opioid prescription duration limits (Edition 6)",
+      "15 states with 7-day initial opioid limits; TN/KY/FL/MN limit to 3-4 days (Edition 6)",
+      "Massachusetts first state to pass 7-day opioid limit, 2016 (Edition 6)",
+      "150 million Europeans with chronic pain (Edition 6)",
+      "19% of adult Europeans with moderate-to-severe chronic pain (Edition 6)",
+      "Only 2% of European chronic pain patients managed by pain specialist (Edition 6)",
+      "6-112 weeks pain clinic wait times across Great Britain (Edition 6)",
+      "PainNet launched May 7, 2026 in Ireland (Edition 6)"
     ],
     "source_urls": [
       "https://www.painnewsnetwork.org/stories/2026/3/18/reflecting-on-13-years-of-chronic-pain",
@@ -178,7 +208,43 @@
       "https://absencesoft.com/resources/how-employee-accommodations-are-changing-in-2026/",
       "https://askjan.org/disabilities/Chronic-Pain.cfm",
       "https://www.rthm.com/resources/blogs/workplace-accommodations-chronic-illness",
-      "https://www.trajectordisability.com/chronic-pain-ssdi-guide/"
+      "https://www.trajectordisability.com/chronic-pain-ssdi-guide/",
+      "https://www.painnewsnetwork.org/stories/2026/2/10/medicare-pilot-program-could-deny-coverage-of-several-pain-treatments",
+      "https://kff.org/medicare/examining-the-potential-impact-of-medicares-new-wiser-model/",
+      "https://www.medicalbillersandcoders.com/blog/are-prior-auth-denials-rising-in-pain-management/",
+      "https://www.aarp.org/medicare/original-medicare-ai-prior-authorization-pilot/",
+      "https://www.medscape.com/viewarticle/unsustainable-physicians-lawsuit-challenge-medicares-wiser-2026a1000ae8",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11185187/",
+      "https://pubmed.ncbi.nlm.nih.gov/28850374/",
+      "https://www.azfamily.com/2026/02/11/new-phoenix-pediatric-pain-center-reduces-wait-times-children/",
+      "https://pharmaceutical-journal.com/article/news/some-patients-with-chronic-pain-face-waiting-years-to-see-a-specialist",
+      "https://www.medcentral.com/pain/chronic/urinary-drug-testing-pain-management",
+      "https://academic.oup.com/painmedicine/article/19/1/97/4683199",
+      "https://pubmed.ncbi.nlm.nih.gov/21810007/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8730562/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11855541/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10303136/",
+      "https://www.ablesingles.com/2026/02/25/dating-with-chronic-illness-build-a-relationship-that-lasts/",
+      "https://www.janetjay.com/dating-chronic-pain-dating-invisible-disabilities/",
+      "https://www.thefibroguy.com/blog/chronic-pain-disclosure-dating-new-partner/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12370396/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9176257/",
+      "https://www.1800cantwork.com/chronic-illness-long-term-disability-benefits-2026/",
+      "https://coherentmarketinsights.com/market-insight/us-compounding-pharmacies-market-3142",
+      "https://www.medfinder.com/blog/ketamine-shortage-what-providers-prescribers-need-to-know-2026",
+      "https://www.rstreet.org/research/compounding-pharmacies-and-compounded-medications/",
+      "https://www.fda.gov/drugs/human-drug-compounding/fda-warns-patients-and-health-care-providers-about-potential-risks-associated-compounded-ketamine",
+      "https://www.pharmacytimes.com/view/opioid-prescribing-limits-across-the-states",
+      "https://ballotpedia.org/Opioid_prescription_limits_and_policies_by_state",
+      "https://www.medicaleconomics.com/view/opioid-prescribing-little-affected-by-state-laws-study",
+      "https://www.acep.org/state-advocacy/opioid-advocacy-resources/opioid-prescribing-legislation",
+      "https://pubmed.ncbi.nlm.nih.gov/16095934/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3878786/",
+      "https://europeanpainfederation.eu/sip/access-to-treatment/",
+      "https://chronicpain.ie/painnet-was-officially-launched-7th-may-2026/",
+      "https://www.pennmedicine.org/news/gene-therapy-switch-may-offer-non-addictive-pain-relief",
+      "https://www.nature.com/articles/s41586-025-09908-w",
+      "https://knowridge.com/2026/01/new-gene-therapy-may-offer-pain-relief-without-addiction-risk/"
     ],
     "story_angles": [
       "prevalence-big-stat",
@@ -227,7 +293,16 @@
       "pain-psychology-cbt-act",
       "placebo-nocebo-effects",
       "parenting-through-flares",
-      "ada-workplace-accommodations"
+      "ada-workplace-accommodations",
+      "medicare-medicaid-coverage-gaps",
+      "specialist-wait-times",
+      "drug-testing-patients",
+      "dating-with-chronic-pain",
+      "career-loss-identity-shift",
+      "compounding-pharmacies",
+      "state-opioid-laws-update",
+      "international-comparisons",
+      "cross-subreddit-solidarity"
     ]
   },
   "theme_pool": {
