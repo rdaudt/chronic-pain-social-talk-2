@@ -1,9 +1,9 @@
 {
   "base_url": "https://rdaudt.github.io/chronic-pain-social-talk-2",
   "last_edition": {
-    "number": 6,
-    "date": "2026-06-01",
-    "output_file": "editions/edition-6.html"
+    "number": 7,
+    "date": "2026-06-08",
+    "output_file": "editions/edition-7.html"
   },
   "used_content": {
     "quotes": [
@@ -33,7 +33,19 @@
       "The stress test of a chronic condition acts as a filter, leaving you with a partner who is exceptionally empathetic and committed.",
       "Greater illness disclosure was consistently linked to better health and relational outcomes, particularly when the partner responds with genuine care, validation, and interest.",
       "Chronic pain weakens work identity and confidence, while stigma and unsupportive workplace cultures hinder communication and accommodations.",
-      "By targeting the precise brain circuits that morphine acts on, we believe this is a first step in offering new relief for people whose lives are upended by chronic pain."
+      "By targeting the precise brain circuits that morphine acts on, we believe this is a first step in offering new relief for people whose lives are upended by chronic pain.",
+      "Chronic pain teaches patients to live by a calendar no healthy body would choose: appointment dates, refill dates, insurance deadlines, pharmacy calls, portal messages, urine screens, and prior authorizations. Days spent wondering whether a doctor will listen, whether a pharmacist will hesitate, and whether one small misunderstanding will turn a hard month into something worse.",
+      "Drug tapering is associated with deaths from overdose and suicide, with risk increasing the longer a person had been taking opioids.",
+      "Reducing or discontinuing prescription opioids increases the risk of overdose, overdose deaths, and suicides, especially when tapering is forced or rapid.",
+      "CBT-I has the potential to benefit a substantial proportion of pain sufferers given that insomnia is the most common sleep disorder — and 50% of those with insomnia experience chronic pain.",
+      "Individuals concurrently experiencing high social isolation and loneliness had the highest odds of developing chronic pain.",
+      "Subjective loneliness has a more important relationship with chronic pain than objective social isolation alone.",
+      "The microbiota-gut-brain axis has emerged as a compelling systems-level model capable of integrating nociceptive, neuropathic, and nociplastic mechanisms into a unified biological context for chronic pain.",
+      "Neuropathic pain remains underdiagnosed, undertreated and frequently misunderstood, contributing to avoidable suffering globally.",
+      "If your doctor is not validating your pain, or is not even curious about it, then you really need to seek a second opinion.",
+      "Patients learn to recognize that their 'self' is separate from their thoughts, emotions, or physical body — especially when identity becomes entwined with pain — allowing them to observe their pain without becoming their pain.",
+      "Positive correlations between the level of acceptance of pain and greater availability for mindfulness practice suggest these approaches work together synergistically — each making the other more effective.",
+      "Veterans with chronic pain improved when doctors treated sleep, stress, movement, and personal goals alongside the pain itself — not just the pain."
     ],
     "statistics": [
       "50 million Americans with chronic pain",
@@ -120,7 +132,26 @@
       "19% of adult Europeans with moderate-to-severe chronic pain (Edition 6)",
       "Only 2% of European chronic pain patients managed by pain specialist (Edition 6)",
       "6-112 weeks pain clinic wait times across Great Britain (Edition 6)",
-      "PainNet launched May 7, 2026 in Ireland (Edition 6)"
+      "PainNet launched May 7, 2026 in Ireland (Edition 6)",
+      "90% co-occurrence rate of poor sleep and chronic pain in clinical populations (Edition 7)",
+      "50% of insomnia patients also have chronic pain — CBT-I a dual-benefit intervention (Oxford Academic SLEEP journal, Edition 7)",
+      "52.6% of stable long-term opioid patients being tapered by 2017-2019, up from 12.7% in 2008 (Edition 7)",
+      "3x increased overdose risk with forced or rapid opioid tapering (Edition 7)",
+      "110,000+ stable opioid patients studied in 2022 UC Davis tapering analysis (Edition 7)",
+      "53.68% of older adults without chronic pain at baseline developed it during follow-up; concurrent loneliness and isolation top predictor (Journal of Pain Research 2026 Chinese cohort, Edition 7)",
+      "580-830 million people worldwide with neuropathic pain (IASP 2026 Global Year, Edition 7)",
+      "40-80% of chronic pain patients receive at least one misdiagnosis (Nova Science Publishers, Edition 7)",
+      "405 of 429 hypermobile EDS patients experienced misdiagnosis in at least one clinical category (2025 study, Edition 7)",
+      "7-10 years average time from first endometriosis symptoms to correct diagnosis (NYU Langone 2026, Edition 7)",
+      "40% of chronic pain second opinions lead to different diagnostic or treatment approach (Edition 7)",
+      "764 VA patients across 6 health systems in wHOPE randomized clinical trial (JAMA April 29, 2026, Edition 7)",
+      "-0.58 points greater pain interference reduction: Whole Health vs. CBT at 12 months (wHOPE/JAMA 2026, Edition 7)",
+      "-0.77 points greater pain interference reduction: Whole Health vs. usual care at 12 months (wHOPE/JAMA 2026, Edition 7)",
+      "45 VA medical centers expanding Mynd Immersive VR pain therapy (MobiHealthNews 2026, Edition 7)",
+      "$293 million proposed by NPAC for NIH HEAL Initiative pain portfolio (nationalpain.org 2026, Edition 7)",
+      "24 states: NPAC fought CMS peripheral nerve block coverage denial (2026, Edition 7)",
+      "12 anatomical pain locations with genetically confirmed gut-brain causal links (Human Genomics Springer 2025, Edition 7)",
+      "22% of Canadian women have chronic pain; nearly half of women veterans in Canada (GlobeNewswire June 8 2026, Edition 7)"
     ],
     "source_urls": [
       "https://www.painnewsnetwork.org/stories/2026/3/18/reflecting-on-13-years-of-chronic-pain",
@@ -244,7 +275,34 @@
       "https://chronicpain.ie/painnet-was-officially-launched-7th-may-2026/",
       "https://www.pennmedicine.org/news/gene-therapy-switch-may-offer-non-addictive-pain-relief",
       "https://www.nature.com/articles/s41586-025-09908-w",
-      "https://knowridge.com/2026/01/new-gene-therapy-may-offer-pain-relief-without-addiction-risk/"
+      "https://knowridge.com/2026/01/new-gene-therapy-may-offer-pain-relief-without-addiction-risk/",
+      "https://pjmedia.com/david-manney/2026/06/02/a-lifelong-condition-shouldnt-feel-like-monthly-probation-n4953513",
+      "https://www.manilatimes.net/2026/06/08/tmt-newswire/globenewswire/national-action-urged-to-address-chronic-pain-crisis-among-women-and-women-veterans-in-canada/2360870",
+      "https://jamanetwork.com/journals/jama/article-abstract/2848379",
+      "https://www.va.gov/san-francisco-health-care/news-releases/landmark-clinical-trial-found-that-an-interdisciplinary-va-whole-health-team-approach-significantly-reduces/",
+      "https://medicalxpress.com/news/2026-05-health-approach-chronic-pain-disruption.html",
+      "https://www.earth.com/news/veterans-with-chronic-pain-improved-when-doctors-treated-the-whole-person-not-just-the-pain/",
+      "https://www.dav.org/learn-more/news/2026/virtual-reality-pain-treatment-expands-for-veterans/",
+      "https://www.mobihealthnews.com/news/va-expands-mynd-immersive-vr-therapies-45-medical-centers-nationwide",
+      "https://www.iasp-pain.org/advocacy/global-year/neuropathic-pain-2026/",
+      "https://www.iasp-pain.org/publications/iasp-news/global-initiative-targets-neuropathic-pain-impacting-hundreds-of-millions-worldwide/",
+      "https://www.painstorm.co.uk/articles/2026-global-year-neuropathic-pain",
+      "https://www.anzca.edu.au/news-and-safety-alerts/iasp-announces-2026-global-year-theme",
+      "https://www.tandfonline.com/doi/full/10.2147/JPR.S526555",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12375317/",
+      "https://link.springer.com/article/10.1186/s40246-025-00876-w",
+      "https://www.ahr-journal.org/site/article/view/139",
+      "https://sahmri.org.au/news/research/hopwood-centre-for-neurobiology/new-insights-into-the-gut-brain-axis-decode-chronic-pain-pathways",
+      "https://painresearchforum.org/paper/the-brain-gut-axis-and-chronic-pain-mechanisms-and-therapeutic-opportunities",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11868272/",
+      "https://academic.oup.com/sleep/article/47/6/zsae089/7650019",
+      "https://link.springer.com/article/10.1186/s13063-025-09013-3",
+      "https://onlinelibrary.wiley.com/doi/10.1002/ejp.70274",
+      "https://www.acsh.org/news/2026/05/01/decade-suffering-how-opioid-panic-abandoned-pain-patients-50087",
+      "https://nyulangone.org/news/endometriosis-misdiagnosis-what-you-need-know",
+      "https://nationalpain.org/advocacy",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8915730/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11413547/"
     ],
     "story_angles": [
       "prevalence-big-stat",
@@ -302,7 +360,11 @@
       "compounding-pharmacies",
       "state-opioid-laws-update",
       "international-comparisons",
-      "cross-subreddit-solidarity"
+      "cross-subreddit-solidarity",
+      "medication-tapering-stories",
+      "friendship-erosion",
+      "second-opinion-journeys",
+      "acceptance-vs-fighting"
     ]
   },
   "theme_pool": {
